@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[Workers]
+﻿CREATE TABLE [dbo].[Subcontractors]
 (
 	[Id] INT NOT NULL PRIMARY KEY identity,
 	[Name] varchar(50) not null,

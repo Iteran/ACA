@@ -3,7 +3,6 @@
 	[Id] INT NOT NULL PRIMARY KEY identity,
 	[Date] date not null,
 	CustomerId int not null,
-	DownPayment money,
 	Total money,
 	IsPaid bit, 
     CONSTRAINT [FK_Command_Customer] FOREIGN KEY ([CustomerId]) REFERENCES [Customers]([Id])
