@@ -21,4 +21,18 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="[FK_ContractManufacturing_ToSubcontractor]" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="7824c2aa-1259-46d5-904e-5f08204b43f5" ChangeDateTime="10/21/2021 09:51:30">
+    <Property Name="ElementName" Value="[dbo].[FK_ManufacturingEndProduct_ToTable]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[ManufacturingEndProduct]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_ManufacturingEndProduct_ToManufacturing]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="96af854e-65aa-4888-81b7-e089ed4402b2" ChangeDateTime="10/21/2021 09:51:45">
+    <Property Name="ElementName" Value="[dbo].[FK_ManufacturingEndProduct_ToTable_1]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[ManufacturingEndProduct]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_ManufacturingEndProduct_ToEndProduct]" />
+  </Operation>
 </Operations>

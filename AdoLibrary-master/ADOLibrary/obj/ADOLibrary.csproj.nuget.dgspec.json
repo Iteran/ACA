@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Exiteras\\Desktop\\ACA\\ACA\\AdoLibrary-master\\ADOLibrary\\ADOLibrary.csproj": {}
+    "C:\\Users\\Exiteras\\Desktop\\View\\ACA\\AdoLibrary-master\\ADOLibrary\\ADOLibrary.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Exiteras\\Desktop\\ACA\\ACA\\AdoLibrary-master\\ADOLibrary\\ADOLibrary.csproj": {
+    "C:\\Users\\Exiteras\\Desktop\\View\\ACA\\AdoLibrary-master\\ADOLibrary\\ADOLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Exiteras\\Desktop\\ACA\\ACA\\AdoLibrary-master\\ADOLibrary\\ADOLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\Exiteras\\Desktop\\View\\ACA\\AdoLibrary-master\\ADOLibrary\\ADOLibrary.csproj",
         "projectName": "ADOLibrary",
-        "projectPath": "C:\\Users\\Exiteras\\Desktop\\ACA\\ACA\\AdoLibrary-master\\ADOLibrary\\ADOLibrary.csproj",
+        "projectPath": "C:\\Users\\Exiteras\\Desktop\\View\\ACA\\AdoLibrary-master\\ADOLibrary\\ADOLibrary.csproj",
         "packagesPath": "C:\\Users\\Exiteras\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Exiteras\\Desktop\\ACA\\ACA\\AdoLibrary-master\\ADOLibrary\\obj\\",
+        "outputPath": "C:\\Users\\Exiteras\\Desktop\\View\\ACA\\AdoLibrary-master\\ADOLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"

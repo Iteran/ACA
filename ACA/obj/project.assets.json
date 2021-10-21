@@ -199,11 +199,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Exiteras\\Desktop\\ACA\\ACA\\ACA\\ACA.csproj",
+      "projectUniqueName": "C:\\Users\\Exiteras\\Desktop\\View\\ACA\\ACA\\ACA.csproj",
       "projectName": "ACA",
-      "projectPath": "C:\\Users\\Exiteras\\Desktop\\ACA\\ACA\\ACA\\ACA.csproj",
+      "projectPath": "C:\\Users\\Exiteras\\Desktop\\View\\ACA\\ACA\\ACA.csproj",
       "packagesPath": "C:\\Users\\Exiteras\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Exiteras\\Desktop\\ACA\\ACA\\ACA\\obj\\",
+      "outputPath": "C:\\Users\\Exiteras\\Desktop\\View\\ACA\\ACA\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"

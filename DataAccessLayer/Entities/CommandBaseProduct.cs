@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Mappers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,7 @@ namespace DataAccessLayer.Entities
 {
     public class CommandBaseProduct
     {
+        [MapIgnore]
         public int Id { get; set; }
         public int BaseProductId { get; set; }
         public int CommandId { get; set; }

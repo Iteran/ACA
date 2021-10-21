@@ -63,7 +63,7 @@
   <ItemGroup>
     <Build Include="Tables\Users.sql" />
     <Build Include="Tables\Customers.sql" />
-    <Build Include="Tables\Command.sql" />
+    <Build Include="Tables\Orders.sql" />
     <Build Include="Tables\BaseProducts.sql" />
     <Build Include="Tables\Manufacturing.sql" />
     <Build Include="Tables\Subcontractors.sql" />
@@ -73,6 +73,10 @@
     <Build Include="Tables\EndProducts.sql" />
     <Build Include="Tables\ComponentEndProduct.sql" />
     <Build Include="Tables\ContractManufacturing.sql" />
+    <Build Include="StoredProcedures\InsertBaseProduct.sql" />
+    <Build Include="StoredProcedures\UpdateBaseProduct.sql" />
+    <Build Include="Tables\ManufacturingEndProduct.sql" />
+    <Build Include="StoredProcedures\InsertOrder.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="ACADB.refactorlog" />

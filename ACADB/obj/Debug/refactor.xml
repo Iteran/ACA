@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0">
+  <Operation Name="Rename Refactor" Key="d012d042-4f27-4737-958e-2d8cfe9fc8d5" ChangeDateTime="10/20/2021 14:28:04" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[dbo].[FK_ComponentEndProduct_ToTable]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[ComponentEndProduct]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_ComponentEndProduct_ToBaseProduct]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="343162af-c09b-408c-b601-99b351a112a6" ChangeDateTime="10/20/2021 14:30:24" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[dbo].[FK_ContractManufacturing_ToTable]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[ContractManufacturing]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_ContractManufacturing_ToManufacturing]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="218b572d-e9a5-4510-870b-75f066ff1a52" ChangeDateTime="10/20/2021 14:30:36" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[dbo].[FK_ContractManufacturing_ToTable_1]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[ContractManufacturing]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_ContractManufacturing_ToSubcontractor]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="7824c2aa-1259-46d5-904e-5f08204b43f5" ChangeDateTime="10/21/2021 09:51:30" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[dbo].[FK_ManufacturingEndProduct_ToTable]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[ManufacturingEndProduct]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_ManufacturingEndProduct_ToManufacturing]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="96af854e-65aa-4888-81b7-e089ed4402b2" ChangeDateTime="10/21/2021 09:51:45" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[dbo].[FK_ManufacturingEndProduct_ToTable_1]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[ManufacturingEndProduct]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_ManufacturingEndProduct_ToEndProduct]" />
+  </Operation>
+</Operations>
