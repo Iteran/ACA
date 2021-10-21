@@ -1,0 +1,15 @@
+E:\Repos\HotelRestau\Mappers\bin\Debug\net5.0\Mappers.deps.json
+E:\Repos\HotelRestau\Mappers\bin\Debug\net5.0\Mappers.dll
+E:\Repos\HotelRestau\Mappers\bin\Debug\net5.0\ref\Mappers.dll
+E:\Repos\HotelRestau\Mappers\bin\Debug\net5.0\Mappers.pdb
+E:\Repos\HotelRestau\Mappers\obj\Debug\net5.0\Mappers.GeneratedMSBuildEditorConfig.editorconfig
+E:\Repos\HotelRestau\Mappers\obj\Debug\net5.0\Mappers.AssemblyInfoInputs.cache
+E:\Repos\HotelRestau\Mappers\obj\Debug\net5.0\Mappers.AssemblyInfo.cs
+E:\Repos\HotelRestau\Mappers\obj\Debug\net5.0\Mappers.csproj.CoreCompileInputs.cache
+E:\Repos\HotelRestau\Mappers\obj\Debug\net5.0\Mappers.dll
+E:\Repos\HotelRestau\Mappers\obj\Debug\net5.0\ref\Mappers.dll
+E:\Repos\HotelRestau\Mappers\obj\Debug\net5.0\Mappers.pdb
+E:\Repos\HotelRestau\Mappers\obj\Debug\net5.0\Mappers.csproj.AssemblyReference.cache
+E:\Repos\HotelRestau\Mappers\bin\Debug\net5.0\ADOLibrary.dll
+E:\Repos\HotelRestau\Mappers\bin\Debug\net5.0\ADOLibrary.pdb
+E:\Repos\HotelRestau\Mappers\obj\Debug\net5.0\Mappers.csproj.CopyComplete

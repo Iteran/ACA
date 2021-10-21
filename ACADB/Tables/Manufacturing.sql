@@ -6,5 +6,5 @@
 	Total Money,
 	DownPayment money,
 	CustomerId int not null,
-	[Status] bit
+	[Status] VARCHAR(50)
  )

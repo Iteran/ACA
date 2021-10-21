@@ -1,0 +1,6 @@
+C:\Users\Exiteras\Desktop\ACA\ACA\ACADB\bin\Debug\ACADB.dacpac
+C:\Users\Exiteras\Desktop\ACA\ACA\ACADB\bin\Debug\ACADB.dll
+C:\Users\Exiteras\Desktop\ACA\ACA\ACADB\bin\Debug\ACADB.pdb
+C:\Users\Exiteras\Desktop\ACA\ACA\ACADB\obj\Debug\ACADB.sqlproj.AssemblyReference.cache
+C:\Users\Exiteras\Desktop\ACA\ACA\ACADB\obj\Debug\ACADB.dll
+C:\Users\Exiteras\Desktop\ACA\ACA\ACADB\obj\Debug\ACADB.pdb

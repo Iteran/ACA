@@ -1,0 +1,35 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [dbo].[BaseProducts] (Table)
+       [dbo].[Command] (Table)
+       [dbo].[CommandBaseProduct] (Table)
+       [dbo].[ComponentEndProduct] (Table)
+       [dbo].[ContractManufacturing] (Table)
+       [dbo].[Customers] (Table)
+       [dbo].[EndProducts] (Table)
+       [dbo].[Manufacturing] (Table)
+       [dbo].[Subcontractors] (Table)
+       [dbo].[Users] (Table)
+       Default Constraint: unnamed constraint on [dbo].[Users] (Default Constraint)
+       [dbo].[FK_Command_Customer] (Foreign Key)
+       [dbo].[FK_CommandProduct_ToCommand] (Foreign Key)
+       [dbo].[FK_CommandProduct_ToProduct] (Foreign Key)
+       [dbo].[FK_ComponentEndProduct_ToBaseProduct] (Foreign Key)
+       [dbo].[FK_ComponentEndProduct_ToEndProduct] (Foreign Key)
+       [dbo].[FK_ContractManufacturing_ToManufacturing] (Foreign Key)
+       [dbo].[FK_ContractManufacturing_ToSubcontractor] (Foreign Key)
+       [dbo].[FK_Customers_ToUser] (Foreign Key)
+       [dbo].[GetSecretKey] (Function)
+       [dbo].[InsertUser] (Procedure)
+
+** Supporting actions

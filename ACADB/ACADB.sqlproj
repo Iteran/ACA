@@ -77,4 +77,7 @@
   <ItemGroup>
     <RefactorLog Include="ACADB.refactorlog" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="ACADB.publish.xml" />
+  </ItemGroup>
 </Project>
