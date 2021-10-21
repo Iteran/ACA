@@ -12,7 +12,7 @@
 		</CustomData>
 		<CustomData Category="Reference" Type="Assembly">
 			<Metadata Name="LogicalName" Value="ACADB.dll" />
-			<Metadata Name="FileName" Value="C:\USERS\EXITERAS\DESKTOP\VIEW\ACA\ACADB\OBJ\DEBUG\ACADB.DLL" />
+			<Metadata Name="FileName" Value="C:\USERS\EXITERAS\DESKTOP\ACA\ACA\ACADB\OBJ\DEBUG\ACADB.DLL" />
 			<Metadata Name="AssemblyName" Value="ACADB" />
 			<Metadata Name="PermissionSet" Value="SAFE" />
 			<Metadata Name="Owner" Value="" />
@@ -20,7 +20,7 @@
 			<Metadata Name="IsVisible" Value="True" />
 			<Metadata Name="IsModelAware" Value="True" />
 			<Metadata Name="SkipCreationIfEmpty" Value="True" />
-			<Metadata Name="AssemblySymbolsName" Value="C:\Users\Exiteras\Desktop\View\ACA\ACADB\obj\Debug\ACADB.pdb" />
+			<Metadata Name="AssemblySymbolsName" Value="C:\Users\Exiteras\Desktop\ACA\ACA\ACADB\obj\Debug\ACADB.pdb" />
 		</CustomData>
 		<CustomData Category="SqlCmdVariables" Type="SqlCmdVariable" />
 	</Header>
@@ -161,7 +161,7 @@
 					<Element Type="SqlIndexedColumnSpecification">
 						<Relationship Name="Column">
 							<Entry>
-								<References Name="[dbo].[BaseProducts].[Id]" />
+								<References Name="[dbo].[Orders].[Id]" />
 							</Entry>
 						</Relationship>
 					</Element>
@@ -169,7 +169,7 @@
 			</Relationship>
 			<Relationship Name="DefiningTable">
 				<Entry>
-					<References Name="[dbo].[BaseProducts]" />
+					<References Name="[dbo].[Orders]" />
 				</Entry>
 			</Relationship>
 			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="9" />
@@ -218,6 +218,25 @@
 					<Element Type="SqlIndexedColumnSpecification">
 						<Relationship Name="Column">
 							<Entry>
+								<References Name="[dbo].[OrderBaseProduct].[Id]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[OrderBaseProduct]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="12" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
 								<References Name="[dbo].[ManufacturingEndProduct].[Id]" />
 							</Entry>
 						</Relationship>
@@ -229,25 +248,6 @@
 					<References Name="[dbo].[ManufacturingEndProduct]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="12" />
-		</Element>
-		<Element Type="SqlPrimaryKeyConstraint">
-			<Relationship Name="ColumnSpecifications">
-				<Entry>
-					<Element Type="SqlIndexedColumnSpecification">
-						<Relationship Name="Column">
-							<Entry>
-								<References Name="[dbo].[CommandBaseProduct].[Id]" />
-							</Entry>
-						</Relationship>
-					</Element>
-				</Entry>
-			</Relationship>
-			<Relationship Name="DefiningTable">
-				<Entry>
-					<References Name="[dbo].[CommandBaseProduct]" />
-				</Entry>
-			</Relationship>
 			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="13" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint">
@@ -256,7 +256,7 @@
 					<Element Type="SqlIndexedColumnSpecification">
 						<Relationship Name="Column">
 							<Entry>
-								<References Name="[dbo].[Orders].[Id]" />
+								<References Name="[dbo].[BaseProducts].[Id]" />
 							</Entry>
 						</Relationship>
 					</Element>
@@ -264,7 +264,7 @@
 			</Relationship>
 			<Relationship Name="DefiningTable">
 				<Entry>
-					<References Name="[dbo].[Orders]" />
+					<References Name="[dbo].[BaseProducts]" />
 				</Entry>
 			</Relationship>
 			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="14" />
@@ -287,7 +287,23 @@
 								</Element>
 							</Entry>
 						</Relationship>
-						<AttachedAnnotation Disambiguator="9" />
+						<AttachedAnnotation Disambiguator="14" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[BaseProducts].[Name]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="40" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
 					</Element>
 				</Entry>
 				<Entry>
@@ -343,83 +359,6 @@
 					<References ExternalSource="BuiltIns" Name="[dbo]" />
 				</Entry>
 			</Relationship>
-		</Element>
-		<Element Type="SqlTable" Name="[dbo].[CommandBaseProduct]">
-			<Property Name="IsAnsiNullsOn" Value="True" />
-			<Relationship Name="Columns">
-				<Entry>
-					<Element Type="SqlSimpleColumn" Name="[dbo].[CommandBaseProduct].[Id]">
-						<Property Name="IsNullable" Value="False" />
-						<Property Name="IsIdentity" Value="True" />
-						<Relationship Name="TypeSpecifier">
-							<Entry>
-								<Element Type="SqlTypeSpecifier">
-									<Relationship Name="Type">
-										<Entry>
-											<References ExternalSource="BuiltIns" Name="[int]" />
-										</Entry>
-									</Relationship>
-								</Element>
-							</Entry>
-						</Relationship>
-						<AttachedAnnotation Disambiguator="13" />
-					</Element>
-				</Entry>
-				<Entry>
-					<Element Type="SqlSimpleColumn" Name="[dbo].[CommandBaseProduct].[BaseProductId]">
-						<Property Name="IsNullable" Value="False" />
-						<Relationship Name="TypeSpecifier">
-							<Entry>
-								<Element Type="SqlTypeSpecifier">
-									<Relationship Name="Type">
-										<Entry>
-											<References ExternalSource="BuiltIns" Name="[int]" />
-										</Entry>
-									</Relationship>
-								</Element>
-							</Entry>
-						</Relationship>
-					</Element>
-				</Entry>
-				<Entry>
-					<Element Type="SqlSimpleColumn" Name="[dbo].[CommandBaseProduct].[OrderId]">
-						<Property Name="IsNullable" Value="False" />
-						<Relationship Name="TypeSpecifier">
-							<Entry>
-								<Element Type="SqlTypeSpecifier">
-									<Relationship Name="Type">
-										<Entry>
-											<References ExternalSource="BuiltIns" Name="[int]" />
-										</Entry>
-									</Relationship>
-								</Element>
-							</Entry>
-						</Relationship>
-					</Element>
-				</Entry>
-				<Entry>
-					<Element Type="SqlSimpleColumn" Name="[dbo].[CommandBaseProduct].[Quantity]">
-						<Relationship Name="TypeSpecifier">
-							<Entry>
-								<Element Type="SqlTypeSpecifier">
-									<Relationship Name="Type">
-										<Entry>
-											<References ExternalSource="BuiltIns" Name="[int]" />
-										</Entry>
-									</Relationship>
-								</Element>
-							</Entry>
-						</Relationship>
-					</Element>
-				</Entry>
-			</Relationship>
-			<Relationship Name="Schema">
-				<Entry>
-					<References ExternalSource="BuiltIns" Name="[dbo]" />
-				</Entry>
-			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="15" />
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="16" />
 		</Element>
 		<Element Type="SqlTable" Name="[dbo].[ComponentEndProduct]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -493,8 +432,8 @@
 					<References ExternalSource="BuiltIns" Name="[dbo]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="17" />
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="18" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="15" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="16" />
 		</Element>
 		<Element Type="SqlTable" Name="[dbo].[ContractManufacturing]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -583,8 +522,8 @@
 					<References ExternalSource="BuiltIns" Name="[dbo]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="19" />
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="20" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="17" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="18" />
 		</Element>
 		<Element Type="SqlTable" Name="[dbo].[Customers]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -726,7 +665,7 @@
 					<References ExternalSource="BuiltIns" Name="[dbo]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="21" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="19" />
 		</Element>
 		<Element Type="SqlTable" Name="[dbo].[EndProducts]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -793,17 +732,17 @@
 					<References Name="[dbo].[Customers]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="22" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="20" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_CommandProduct_ToCommand]">
 			<Relationship Name="Columns">
 				<Entry>
-					<References Name="[dbo].[CommandBaseProduct].[OrderId]" />
+					<References Name="[dbo].[OrderBaseProduct].[OrderId]" />
 				</Entry>
 			</Relationship>
 			<Relationship Name="DefiningTable">
 				<Entry>
-					<References Name="[dbo].[CommandBaseProduct]" />
+					<References Name="[dbo].[OrderBaseProduct]" />
 				</Entry>
 			</Relationship>
 			<Relationship Name="ForeignColumns">
@@ -816,17 +755,17 @@
 					<References Name="[dbo].[Orders]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="15" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="21" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_CommandProduct_ToProduct]">
 			<Relationship Name="Columns">
 				<Entry>
-					<References Name="[dbo].[CommandBaseProduct].[BaseProductId]" />
+					<References Name="[dbo].[OrderBaseProduct].[BaseProductId]" />
 				</Entry>
 			</Relationship>
 			<Relationship Name="DefiningTable">
 				<Entry>
-					<References Name="[dbo].[CommandBaseProduct]" />
+					<References Name="[dbo].[OrderBaseProduct]" />
 				</Entry>
 			</Relationship>
 			<Relationship Name="ForeignColumns">
@@ -839,7 +778,7 @@
 					<References Name="[dbo].[BaseProducts]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="16" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="22" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_ComponentEndProduct_ToBaseProduct]">
 			<Relationship Name="Columns">
@@ -862,7 +801,7 @@
 					<References Name="[dbo].[BaseProducts]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="17" />
+			<AttachedAnnotation Disambiguator="15" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_ComponentEndProduct_ToEndProduct]">
 			<Relationship Name="Columns">
@@ -885,7 +824,7 @@
 					<References Name="[dbo].[EndProducts]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="18" />
+			<AttachedAnnotation Disambiguator="16" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_ContractManufacturing_ToManufacturing]">
 			<Relationship Name="Columns">
@@ -908,7 +847,7 @@
 					<References Name="[dbo].[Manufacturing]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="19" />
+			<AttachedAnnotation Disambiguator="17" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_ContractManufacturing_ToSubcontractor]">
 			<Relationship Name="Columns">
@@ -931,7 +870,7 @@
 					<References Name="[dbo].[Subcontractors]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="20" />
+			<AttachedAnnotation Disambiguator="18" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_Customers_ToUser]">
 			<Relationship Name="Columns">
@@ -954,7 +893,7 @@
 					<References Name="[dbo].[Users]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="21" />
+			<AttachedAnnotation Disambiguator="19" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_ManufacturingEndProduct_ToEndProduct]">
 			<Relationship Name="Columns">
@@ -1050,13 +989,16 @@
 		<Element Type="SqlProcedure" Name="[dbo].[InsertBaseProduct]">
 			<Property Name="BodyScript">
 				<Value><![CDATA[
-	insert into BaseProducts (Picture,Description,Quantity) values(@picture,@description,@quantity)
+	insert into BaseProducts (Name,Picture,Description,Quantity) values(@name,@picture,@description,@quantity)
 RETURN 0]]></Value>
 			</Property>
 			<Property Name="IsAnsiNullsOn" Value="True" />
 			<Relationship Name="BodyDependencies">
 				<Entry>
 					<References Name="[dbo].[BaseProducts]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[BaseProducts].[Name]" />
 				</Entry>
 				<Entry>
 					<References Name="[dbo].[BaseProducts].[Picture]" />
@@ -1066,6 +1008,9 @@ RETURN 0]]></Value>
 				</Entry>
 				<Entry>
 					<References Name="[dbo].[BaseProducts].[Quantity]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[InsertBaseProduct].[@name]" />
 				</Entry>
 				<Entry>
 					<References Name="[dbo].[InsertBaseProduct].[@picture]" />
@@ -1078,6 +1023,22 @@ RETURN 0]]></Value>
 				</Entry>
 			</Relationship>
 			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[InsertBaseProduct].[@name]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="40" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
 				<Entry>
 					<Element Type="SqlSubroutineParameter" Name="[dbo].[InsertBaseProduct].[@picture]">
 						<Relationship Name="Type">
@@ -1132,10 +1093,120 @@ RETURN 0]]></Value>
 				</Entry>
 			</Relationship>
 			<Annotation Type="SysCommentsObjectAnnotation">
-				<Property Name="Length" Value="224" />
+				<Property Name="Length" Value="256" />
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
-				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[InsertBaseProduct]&#xD;&#xA;&#x9;@picture varchar(200),&#xD;&#xA;&#x9;@description varchar(200),&#xD;&#xA;&#x9;@quantity int&#xD;&#xA;AS" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[InsertBaseProduct]&#xD;&#xA;&#x9;@name varchar(40),&#xD;&#xA;&#x9;@picture varchar(200),&#xD;&#xA;&#x9;@description varchar(200),&#xD;&#xA;&#x9;@quantity int&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[InsertOrder]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	insert into Orders (Date,CustomerId,Total,IsPaid) values (@date,@customerId,@total,@isPaid)
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Orders]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Orders].[Date]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Orders].[CustomerId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Orders].[Total]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Orders].[IsPaid]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[InsertOrder].[@date]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[InsertOrder].[@customerId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[InsertOrder].[@total]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[InsertOrder].[@isPaid]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[InsertOrder].[@date]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[date]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[InsertOrder].[@customerId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[InsertOrder].[@total]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[money]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[InsertOrder].[@isPaid]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="207" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[InsertOrder]&#xD;&#xA;&#x9;@date date,&#xD;&#xA;&#x9;@customerId int,&#xD;&#xA;&#x9;@total money,&#xD;&#xA;&#x9;@isPaid bit&#xD;&#xA;AS" />
 			</Annotation>
 		</Element>
 		<Element Type="SqlProcedure" Name="[dbo].[InsertUser]">
@@ -1369,7 +1440,7 @@ RETURN 0]]></Value>
 								</Element>
 							</Entry>
 						</Relationship>
-						<AttachedAnnotation Disambiguator="12" />
+						<AttachedAnnotation Disambiguator="13" />
 					</Element>
 				</Entry>
 				<Entry>
@@ -1411,6 +1482,83 @@ RETURN 0]]></Value>
 			<AttachedAnnotation Disambiguator="24" />
 			<AttachedAnnotation Disambiguator="23" />
 		</Element>
+		<Element Type="SqlTable" Name="[dbo].[OrderBaseProduct]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[OrderBaseProduct].[Id]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="12" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[OrderBaseProduct].[BaseProductId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[OrderBaseProduct].[OrderId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[OrderBaseProduct].[Quantity]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="21" />
+			<AttachedAnnotation Disambiguator="22" />
+		</Element>
 		<Element Type="SqlTable" Name="[dbo].[Orders]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
 			<Relationship Name="Columns">
@@ -1429,7 +1577,7 @@ RETURN 0]]></Value>
 								</Element>
 							</Entry>
 						</Relationship>
-						<AttachedAnnotation Disambiguator="14" />
+						<AttachedAnnotation Disambiguator="9" />
 					</Element>
 				</Entry>
 				<Entry>
@@ -1500,7 +1648,7 @@ RETURN 0]]></Value>
 					<References ExternalSource="BuiltIns" Name="[dbo]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="22" />
+			<AttachedAnnotation Disambiguator="20" />
 		</Element>
 		<Element Type="SqlTable" Name="[dbo].[Subcontractors]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -1599,7 +1747,7 @@ RETURN 0]]></Value>
 		<Element Type="SqlProcedure" Name="[dbo].[UpdateBaseProduct]">
 			<Property Name="BodyScript">
 				<Value><![CDATA[
-	update BaseProducts set Picture = @picture, Description = @description, Quantity = @quantity
+	update BaseProducts set Picture = @picture, Description = @description, Quantity = @quantity, Name = @name where Id = @id
 RETURN 0]]></Value>
 			</Property>
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -1625,8 +1773,36 @@ RETURN 0]]></Value>
 				<Entry>
 					<References Name="[dbo].[UpdateBaseProduct].[@quantity]" />
 				</Entry>
+				<Entry>
+					<References Name="[dbo].[BaseProducts].[Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateBaseProduct].[@name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[BaseProducts].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateBaseProduct].[@id]" />
+				</Entry>
 			</Relationship>
 			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateBaseProduct].[@name]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="40" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
 				<Entry>
 					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateBaseProduct].[@picture]">
 						<Property Name="DefaultExpressionScript">
@@ -1677,6 +1853,21 @@ RETURN 0]]></Value>
 						</Relationship>
 					</Element>
 				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateBaseProduct].[@id]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
 			</Relationship>
 			<Relationship Name="Schema">
 				<Entry>
@@ -1684,10 +1875,10 @@ RETURN 0]]></Value>
 				</Entry>
 			</Relationship>
 			<Annotation Type="SysCommentsObjectAnnotation">
-				<Property Name="Length" Value="225" />
+				<Property Name="Length" Value="286" />
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
-				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[UpdateBaseProduct]&#xD;&#xA;&#x9;@picture varchar(200) = 0,&#xD;&#xA;&#x9;@description varchar(300),&#xD;&#xA;&#x9;@quantity int&#xD;&#xA;AS" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[UpdateBaseProduct]&#xD;&#xA;&#x9;@name varchar(40),&#xD;&#xA;&#x9;@picture varchar(200) = 0,&#xD;&#xA;&#x9;@description varchar(300),&#xD;&#xA;&#x9;@quantity int,&#xD;&#xA;&#x9;@id int&#xD;&#xA;AS" />
 			</Annotation>
 		</Element>
 		<Element Type="SqlTable" Name="[dbo].[Users]">

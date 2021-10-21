@@ -56,7 +56,37 @@ namespace DataAccessLayer.Services
 
             }
         }
+        public bool DeleteOrder(int Id)
+        {
+            Command cmd = new Command("Delete from Orders where Id = @id");
+            cmd.AddParameter("@id", Id);
+            using (TransactionScope scope = new())
+            {
 
+                try
+                {
+
+                    _co.ExecuteNonQuery(cmd);
+                    scope.Complete();
+                    return true;
+                }
+                catch (Exception)
+                {
+
+                    return false;
+                    throw;
+                }
+            }
+        }
+        public bool Paid(int Id, Order order)
+        {
+            Order test = GetById(Id);
+            if (test == null) return false;
+            Command cmd = new Command("Update Orders set IsPaid = 1 where Id = @id");
+            cmd.AddParameter("@id", Id);
+            _co.ExecuteNonQuery(cmd);
+            return true;
+        }
 
     }
 }

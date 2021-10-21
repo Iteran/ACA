@@ -1,0 +1,12 @@
+C:\Users\Exiteras\Desktop\ACA\ACA\AdoLibrary-master\ADOLibrary\bin\Debug\net5.0\ADOLibrary.deps.json
+C:\Users\Exiteras\Desktop\ACA\ACA\AdoLibrary-master\ADOLibrary\bin\Debug\net5.0\ADOLibrary.dll
+C:\Users\Exiteras\Desktop\ACA\ACA\AdoLibrary-master\ADOLibrary\bin\Debug\net5.0\ref\ADOLibrary.dll
+C:\Users\Exiteras\Desktop\ACA\ACA\AdoLibrary-master\ADOLibrary\bin\Debug\net5.0\ADOLibrary.pdb
+C:\Users\Exiteras\Desktop\ACA\ACA\AdoLibrary-master\ADOLibrary\obj\Debug\net5.0\ADOLibrary.csproj.AssemblyReference.cache
+C:\Users\Exiteras\Desktop\ACA\ACA\AdoLibrary-master\ADOLibrary\obj\Debug\net5.0\ADOLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Exiteras\Desktop\ACA\ACA\AdoLibrary-master\ADOLibrary\obj\Debug\net5.0\ADOLibrary.AssemblyInfoInputs.cache
+C:\Users\Exiteras\Desktop\ACA\ACA\AdoLibrary-master\ADOLibrary\obj\Debug\net5.0\ADOLibrary.AssemblyInfo.cs
+C:\Users\Exiteras\Desktop\ACA\ACA\AdoLibrary-master\ADOLibrary\obj\Debug\net5.0\ADOLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Exiteras\Desktop\ACA\ACA\AdoLibrary-master\ADOLibrary\obj\Debug\net5.0\ADOLibrary.dll
+C:\Users\Exiteras\Desktop\ACA\ACA\AdoLibrary-master\ADOLibrary\obj\Debug\net5.0\ref\ADOLibrary.dll
+C:\Users\Exiteras\Desktop\ACA\ACA\AdoLibrary-master\ADOLibrary\obj\Debug\net5.0\ADOLibrary.pdb

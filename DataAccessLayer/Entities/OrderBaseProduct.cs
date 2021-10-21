@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Entities
 {
-    public class CommandBaseProduct
+    public class OrderBaseProduct
     {
         [MapIgnore]
         public int Id { get; set; }
         public int BaseProductId { get; set; }
-        public int CommandId { get; set; }
+        public int OrderId { get; set; }
         public int Quantity { get; set; }
 
     }

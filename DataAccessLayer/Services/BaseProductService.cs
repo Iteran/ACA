@@ -90,8 +90,9 @@ namespace DataAccessLayer.Services
             {
                 throw new Exception (message:"Impossible d'ajouter un nombre inférieur ou égal à 0");
             }
-            Data.Command cmd = new("update BaseProducts set Quantity = @quantity where Id = @id");
+            Data.Command cmd = new("update BaseProducts set Quantity =  Quantity + @quantity where Id = @id");
             cmd.AddParameter("@quantity", value);
+            cmd.AddParameter("@id", Id);
             _co.ExecuteNonQuery(cmd);
             
         }

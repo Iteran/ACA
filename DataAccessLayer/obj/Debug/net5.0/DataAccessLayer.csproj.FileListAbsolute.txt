@@ -1,0 +1,17 @@
+C:\Users\Exiteras\Desktop\ACA\ACA\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.deps.json
+C:\Users\Exiteras\Desktop\ACA\ACA\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.dll
+C:\Users\Exiteras\Desktop\ACA\ACA\DataAccessLayer\bin\Debug\net5.0\ref\DataAccessLayer.dll
+C:\Users\Exiteras\Desktop\ACA\ACA\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.pdb
+C:\Users\Exiteras\Desktop\ACA\ACA\DataAccessLayer\bin\Debug\net5.0\ADOLibrary.dll
+C:\Users\Exiteras\Desktop\ACA\ACA\DataAccessLayer\bin\Debug\net5.0\Mappers.dll
+C:\Users\Exiteras\Desktop\ACA\ACA\DataAccessLayer\bin\Debug\net5.0\ADOLibrary.pdb
+C:\Users\Exiteras\Desktop\ACA\ACA\DataAccessLayer\bin\Debug\net5.0\Mappers.pdb
+C:\Users\Exiteras\Desktop\ACA\ACA\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\Exiteras\Desktop\ACA\ACA\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Exiteras\Desktop\ACA\ACA\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\Exiteras\Desktop\ACA\ACA\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.AssemblyInfo.cs
+C:\Users\Exiteras\Desktop\ACA\ACA\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Exiteras\Desktop\ACA\ACA\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.csproj.CopyComplete
+C:\Users\Exiteras\Desktop\ACA\ACA\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.dll
+C:\Users\Exiteras\Desktop\ACA\ACA\DataAccessLayer\obj\Debug\net5.0\ref\DataAccessLayer.dll
+C:\Users\Exiteras\Desktop\ACA\ACA\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.pdb

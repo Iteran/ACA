@@ -14,3 +14,7 @@ C:\Users\Exiteras\Desktop\View\ACA\ACADB\obj\Debug\postdeploy.sql
 C:\Users\Exiteras\Desktop\View\ACA\ACADB\obj\Debug\predeploy.sql
 C:\Users\Exiteras\Desktop\View\ACA\ACADB\obj\Debug\ACADB.dll
 C:\Users\Exiteras\Desktop\View\ACA\ACADB\obj\Debug\ACADB.pdb
+C:\Users\Exiteras\Desktop\ACA\ACA\ACADB\obj\Debug\Model.xml
+C:\Users\Exiteras\Desktop\ACA\ACA\ACADB\obj\Debug\refactor.xml
+C:\Users\Exiteras\Desktop\ACA\ACA\ACADB\obj\Debug\postdeploy.sql
+C:\Users\Exiteras\Desktop\ACA\ACA\ACADB\obj\Debug\predeploy.sql

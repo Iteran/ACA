@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[CommandBaseProduct]
+﻿CREATE TABLE [dbo].[OrderBaseProduct]
 (
 	[Id] INT NOT NULL PRIMARY KEY identity,
 	BaseProductId int not null,

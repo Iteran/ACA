@@ -67,7 +67,7 @@
     <Build Include="Tables\BaseProducts.sql" />
     <Build Include="Tables\Manufacturing.sql" />
     <Build Include="Tables\Subcontractors.sql" />
-    <Build Include="Tables\CommandBaseProduct.sql" />
+    <Build Include="Tables\OrderBaseProduct.sql" />
     <Build Include="StoredProcedures\InsertUser.sql" />
     <Build Include="Function\GetSecretKey.sql" />
     <Build Include="Tables\EndProducts.sql" />
@@ -83,5 +83,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ACADB.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Script.PostDeployment1.sql" />
   </ItemGroup>
 </Project>
