@@ -10,10 +10,11 @@ using DataAccessLayer.Entities;
 using Mappers;
 using Microsoft.Extensions.Configuration;
 using System.Transactions;
+using InterfacesACA.Interfaces;
 
 namespace DataAccessLayer.Services
 {
-    public class BaseProductService
+    public class BaseProductService : IBaseProductService<BaseProduct>
     {
         private Data.Connection _co { get; set; }
         public BaseProductService(IConfiguration config)
@@ -24,11 +25,11 @@ namespace DataAccessLayer.Services
         {
             return reader.MapReader<BaseProduct>();
         }
-        public void AddBaseProduct(BaseProduct product)
+        public void Create(BaseProduct product)
         {
             using (TransactionScope scope = new())
             {
-                
+
                 try
                 {
                     Data.Command cmd = new("InsertBaseProduct", true);
@@ -42,9 +43,9 @@ namespace DataAccessLayer.Services
                 }
             }
         }
-        public bool DeleteProduct(int id)
+        public bool Delete(int id)
         {
-            using(TransactionScope scope = new())
+            using (TransactionScope scope = new())
             {
                 try
                 {
@@ -73,28 +74,27 @@ namespace DataAccessLayer.Services
             cmd.AddParameter("@id", Id);
             return _co.ExecuteReader<BaseProduct>(cmd, Convert).FirstOrDefault();
         }
-        public bool Update(int Id, BaseProduct product)
+        public BaseProduct Update(int Id, BaseProduct product)
         {
             Data.Command cmd = new("UpdateBaseProduct", true);
             cmd.MapToCommand(product);
             cmd.AddParameter("@id", Id);
-            BaseProduct test = GetById(Id);
-            if (test is null) return false;
             _co.ExecuteNonQuery(cmd);
-            return true;
+            return GetById(Id);
+         
         }
         public void AddQuantity(int Id, int value)
         {
 
-            if (value <=0)
+            if (value <= 0)
             {
-                throw new Exception (message:"Impossible d'ajouter un nombre inférieur ou égal à 0");
+                throw new Exception(message: "Impossible d'ajouter un nombre inférieur ou égal à 0");
             }
             Data.Command cmd = new("update BaseProducts set Quantity =  Quantity + @quantity where Id = @id");
             cmd.AddParameter("@quantity", value);
             cmd.AddParameter("@id", Id);
             _co.ExecuteNonQuery(cmd);
-            
+
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using BusinessLogicLayer.Data;
 using DataAccessLayer.Entities;
-using DataAccessLayer.Services;
+
+using InterfacesACA.Interfaces;
 using Mappers;
 using System;
 using System.Collections.Generic;
@@ -10,34 +11,34 @@ using System.Threading.Tasks;
 
 namespace BusinessLogicLayer.Services
 {
-    public class BaseProductServiceBL
+    public class BaseProductServiceBL : IBaseProductService<BaseProductClient>
     {
-        private readonly BaseProductService _baseProductService;
+        private readonly IBaseProductService<BaseProduct> _baseProductService;
 
-        public BaseProductServiceBL(BaseProductService service)
+        public BaseProductServiceBL(IBaseProductService<BaseProduct> service)
         {
             _baseProductService = service;
         }
-        public void AddProduct(BaseProductClient product)
+        public void Create(BaseProductClient product)
         {
-            _baseProductService.AddBaseProduct(product.Map<BaseProduct>());
+            _baseProductService.Create(product.Map<BaseProduct>());
         }
-        public bool DeleteProduct(int Id)
+        public bool Delete(int Id)
         {
-            return _baseProductService.DeleteProduct(Id);
+            return _baseProductService.Delete(Id);
         }
-        public IEnumerable<BaseProduct> GetAll()
+        public IEnumerable<BaseProductClient> GetAll()
         {
-            return _baseProductService.GetAll();
+            return _baseProductService.GetAll().Select( c => c.Map<BaseProductClient>());
         }
-        public BaseProduct GetById(int Id)
+        public BaseProductClient GetById(int Id)
         {
-            return _baseProductService.GetById(Id);
+            return _baseProductService.GetById(Id).Map<BaseProductClient>();
 
         }
-        public bool Update(int Id,BaseProductClient product)
+        public BaseProductClient Update(int Id,BaseProductClient product)
         {
-            return _baseProductService.Update(Id, product.Map<BaseProduct>());
+            return _baseProductService.Update(Id, product.Map<BaseProduct>()).Map<BaseProductClient>();
         }
         public void AddQuantity(int Id,int value)
         {

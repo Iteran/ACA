@@ -10,10 +10,11 @@ using System.Text;
 using System.Threading.Tasks;
 using ADOLibrary;
 using System.Transactions;
+using InterfacesACA.Interfaces;
 
 namespace DataAccessLayer.Services
 {
-    public class OrderService
+    public class OrderService : IOrderService<Order>
     {
         private Connection _co { get; set; }
         public OrderService(IConfiguration config)
@@ -35,7 +36,7 @@ namespace DataAccessLayer.Services
             cmd.AddParameter("@id", Id);
             return _co.ExecuteReader<Order>(cmd, Convert).FirstOrDefault();
         }
-        public void AddOrder(Order order)
+        public void Create(Order order)
         {
             using(TransactionScope scope = new())
             {
@@ -56,7 +57,7 @@ namespace DataAccessLayer.Services
 
             }
         }
-        public bool DeleteOrder(int Id)
+        public bool Delete(int Id)
         {
             Command cmd = new Command("Delete from Orders where Id = @id");
             cmd.AddParameter("@id", Id);
@@ -88,5 +89,9 @@ namespace DataAccessLayer.Services
             return true;
         }
 
+        public Order Update(int Id, Order Entity)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

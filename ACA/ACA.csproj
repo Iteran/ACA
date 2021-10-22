@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BusinessLogicLayer\BusinessLogicLayer.csproj" />
+    <ProjectReference Include="..\InterfacesACA\InterfacesACA.csproj" />
   </ItemGroup>
 
 </Project>

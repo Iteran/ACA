@@ -1,5 +1,9 @@
+using BusinessLogicLayer.Data;
 using BusinessLogicLayer.Services;
+using DataAccessLayer.Entities;
+
 using DataAccessLayer.Services;
+using InterfacesACA.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -30,8 +34,11 @@ namespace ACA
         {
 
             services.AddControllers();
-            services.AddScoped<BaseProductServiceBL>();
-            services.AddScoped<BaseProductService>();
+            services.AddScoped<IBaseProductService<BaseProduct>,BaseProductService>();
+            services.AddScoped<IBaseProductService<BaseProductClient>,BaseProductServiceBL>();
+            services.AddScoped<IOrderService<Order>, OrderService>();
+            services.AddScoped<IOrderService<OrderClient>, OrderServiceBL>();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ACA", Version = "v1" });

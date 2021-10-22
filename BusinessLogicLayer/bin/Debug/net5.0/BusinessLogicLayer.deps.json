@@ -116,12 +116,18 @@
       "DataAccessLayer/1.0.0": {
         "dependencies": {
           "ADOLibrary": "1.0.0",
+          "InterfacesACA": "1.0.0",
           "Mappers": "1.0.0",
           "Microsoft.Extensions.Configuration.Abstractions": "5.0.0",
           "System.Data.SqlClient": "4.8.3"
         },
         "runtime": {
           "DataAccessLayer.dll": {}
+        }
+      },
+      "InterfacesACA/1.0.0": {
+        "runtime": {
+          "InterfacesACA.dll": {}
         }
       },
       "Mappers/1.0.0": {
@@ -223,6 +229,11 @@
       "sha512": ""
     },
     "DataAccessLayer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "InterfacesACA/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

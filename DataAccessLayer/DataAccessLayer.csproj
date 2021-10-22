@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AdoLibrary-master\ADOLibrary\ADOLibrary.csproj" />
+    <ProjectReference Include="..\InterfacesACA\InterfacesACA.csproj" />
     <ProjectReference Include="..\Mappers\Mappers.csproj" />
   </ItemGroup>
 

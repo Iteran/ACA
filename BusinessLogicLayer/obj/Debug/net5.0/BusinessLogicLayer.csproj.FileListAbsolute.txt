@@ -17,3 +17,5 @@ C:\Users\Exiteras\Desktop\ACA\ACA\BusinessLogicLayer\obj\Debug\net5.0\BusinessLo
 C:\Users\Exiteras\Desktop\ACA\ACA\BusinessLogicLayer\obj\Debug\net5.0\BusinessLogicLayer.dll
 C:\Users\Exiteras\Desktop\ACA\ACA\BusinessLogicLayer\obj\Debug\net5.0\ref\BusinessLogicLayer.dll
 C:\Users\Exiteras\Desktop\ACA\ACA\BusinessLogicLayer\obj\Debug\net5.0\BusinessLogicLayer.pdb
+C:\Users\Exiteras\Desktop\ACA\ACA\BusinessLogicLayer\bin\Debug\net5.0\InterfacesACA.dll
+C:\Users\Exiteras\Desktop\ACA\ACA\BusinessLogicLayer\bin\Debug\net5.0\InterfacesACA.pdb

@@ -1,0 +1,11 @@
+C:\Users\Exiteras\Desktop\ACA\ACA\InterfacesACA\bin\Debug\net5.0\InterfacesACA.deps.json
+C:\Users\Exiteras\Desktop\ACA\ACA\InterfacesACA\bin\Debug\net5.0\InterfacesACA.dll
+C:\Users\Exiteras\Desktop\ACA\ACA\InterfacesACA\bin\Debug\net5.0\ref\InterfacesACA.dll
+C:\Users\Exiteras\Desktop\ACA\ACA\InterfacesACA\bin\Debug\net5.0\InterfacesACA.pdb
+C:\Users\Exiteras\Desktop\ACA\ACA\InterfacesACA\obj\Debug\net5.0\InterfacesACA.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Exiteras\Desktop\ACA\ACA\InterfacesACA\obj\Debug\net5.0\InterfacesACA.AssemblyInfoInputs.cache
+C:\Users\Exiteras\Desktop\ACA\ACA\InterfacesACA\obj\Debug\net5.0\InterfacesACA.AssemblyInfo.cs
+C:\Users\Exiteras\Desktop\ACA\ACA\InterfacesACA\obj\Debug\net5.0\InterfacesACA.csproj.CoreCompileInputs.cache
+C:\Users\Exiteras\Desktop\ACA\ACA\InterfacesACA\obj\Debug\net5.0\InterfacesACA.dll
+C:\Users\Exiteras\Desktop\ACA\ACA\InterfacesACA\obj\Debug\net5.0\ref\InterfacesACA.dll
+C:\Users\Exiteras\Desktop\ACA\ACA\InterfacesACA\obj\Debug\net5.0\InterfacesACA.pdb

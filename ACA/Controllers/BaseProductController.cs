@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using Mappers;
 
 using BusinessLogicLayer.Data;
+using InterfacesACA.Interfaces;
 
 namespace ACA.Controllers
 {
@@ -16,8 +17,8 @@ namespace ACA.Controllers
     [ApiController]
     public class BaseProductController : ControllerBase
     {
-        private readonly BaseProductServiceBL _baseProductService;
-        public BaseProductController(BaseProductServiceBL service)
+        private readonly IBaseProductService<BaseProductClient>  _baseProductService;
+        public BaseProductController(IBaseProductService<BaseProductClient> service)
         {
             _baseProductService = service;
         }
@@ -36,7 +37,7 @@ namespace ACA.Controllers
         {
             try
             {
-                _baseProductService.AddProduct(product.Map<BaseProductClient>());
+                _baseProductService.Create(product.Map<BaseProductClient>());
                 return Ok();
 
             }
@@ -61,7 +62,7 @@ namespace ACA.Controllers
         [HttpDelete("{Id}")]
         public IActionResult Delete([FromRoute] int Id)
         {
-            _baseProductService.DeleteProduct(Id);
+            _baseProductService.Delete(Id);
             return Ok();
         }
     }

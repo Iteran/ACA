@@ -162,6 +162,16 @@
           "bin/placeholder/ADOLibrary.dll": {}
         }
       },
+      "InterfacesACA/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/InterfacesACA.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/InterfacesACA.dll": {}
+        }
+      },
       "Mappers/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -538,6 +548,11 @@
       "path": "../AdoLibrary-master/ADOLibrary/ADOLibrary.csproj",
       "msbuildProject": "../AdoLibrary-master/ADOLibrary/ADOLibrary.csproj"
     },
+    "InterfacesACA/1.0.0": {
+      "type": "project",
+      "path": "../InterfacesACA/InterfacesACA.csproj",
+      "msbuildProject": "../InterfacesACA/InterfacesACA.csproj"
+    },
     "Mappers/1.0.0": {
       "type": "project",
       "path": "../Mappers/Mappers.csproj",
@@ -547,6 +562,7 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "ADOLibrary >= 1.0.0",
+      "InterfacesACA >= 1.0.0",
       "Mappers >= 1.0.0",
       "Microsoft.Extensions.Configuration.Abstractions >= 5.0.0",
       "System.Data.SqlClient >= 4.8.3"
@@ -586,6 +602,9 @@
           "projectReferences": {
             "C:\\Users\\Exiteras\\Desktop\\ACA\\ACA\\AdoLibrary-master\\ADOLibrary\\ADOLibrary.csproj": {
               "projectPath": "C:\\Users\\Exiteras\\Desktop\\ACA\\ACA\\AdoLibrary-master\\ADOLibrary\\ADOLibrary.csproj"
+            },
+            "C:\\Users\\Exiteras\\Desktop\\ACA\\ACA\\InterfacesACA\\InterfacesACA.csproj": {
+              "projectPath": "C:\\Users\\Exiteras\\Desktop\\ACA\\ACA\\InterfacesACA\\InterfacesACA.csproj"
             },
             "C:\\Users\\Exiteras\\Desktop\\ACA\\ACA\\Mappers\\Mappers.csproj": {
               "projectPath": "C:\\Users\\Exiteras\\Desktop\\ACA\\ACA\\Mappers\\Mappers.csproj"

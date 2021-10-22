@@ -167,6 +167,7 @@
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "ADOLibrary": "1.0.0",
+          "InterfacesACA": "1.0.0",
           "Mappers": "1.0.0",
           "Microsoft.Extensions.Configuration.Abstractions": "5.0.0",
           "System.Data.SqlClient": "4.8.3"
@@ -176,6 +177,16 @@
         },
         "runtime": {
           "bin/placeholder/DataAccessLayer.dll": {}
+        }
+      },
+      "InterfacesACA/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/InterfacesACA.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/InterfacesACA.dll": {}
         }
       },
       "Mappers/1.0.0": {
@@ -558,6 +569,11 @@
       "type": "project",
       "path": "../DataAccessLayer/DataAccessLayer.csproj",
       "msbuildProject": "../DataAccessLayer/DataAccessLayer.csproj"
+    },
+    "InterfacesACA/1.0.0": {
+      "type": "project",
+      "path": "../InterfacesACA/InterfacesACA.csproj",
+      "msbuildProject": "../InterfacesACA/InterfacesACA.csproj"
     },
     "Mappers/1.0.0": {
       "type": "project",

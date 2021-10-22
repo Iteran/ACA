@@ -70,3 +70,5 @@ C:\Users\Exiteras\Desktop\ACA\ACA\ACA\bin\Debug\net5.0\BusinessLogicLayer.pdb
 C:\Users\Exiteras\Desktop\ACA\ACA\ACA\bin\Debug\net5.0\ADOLibrary.pdb
 C:\Users\Exiteras\Desktop\ACA\ACA\ACA\bin\Debug\net5.0\DataAccessLayer.pdb
 C:\Users\Exiteras\Desktop\ACA\ACA\ACA\bin\Debug\net5.0\Mappers.pdb
+C:\Users\Exiteras\Desktop\ACA\ACA\ACA\bin\Debug\net5.0\InterfacesACA.dll
+C:\Users\Exiteras\Desktop\ACA\ACA\ACA\bin\Debug\net5.0\InterfacesACA.pdb

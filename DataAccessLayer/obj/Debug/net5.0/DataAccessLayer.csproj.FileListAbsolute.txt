@@ -15,3 +15,5 @@ C:\Users\Exiteras\Desktop\ACA\ACA\DataAccessLayer\obj\Debug\net5.0\DataAccessLay
 C:\Users\Exiteras\Desktop\ACA\ACA\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.dll
 C:\Users\Exiteras\Desktop\ACA\ACA\DataAccessLayer\obj\Debug\net5.0\ref\DataAccessLayer.dll
 C:\Users\Exiteras\Desktop\ACA\ACA\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.pdb
+C:\Users\Exiteras\Desktop\ACA\ACA\DataAccessLayer\bin\Debug\net5.0\InterfacesACA.dll
+C:\Users\Exiteras\Desktop\ACA\ACA\DataAccessLayer\bin\Debug\net5.0\InterfacesACA.pdb
