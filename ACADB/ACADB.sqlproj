@@ -80,6 +80,7 @@
     <Build Include="StoredProcedures\InsertCustomer.sql" />
     <Build Include="StoredProcedures\UpdateCustomer.sql" />
     <Build Include="StoredProcedures\BindCustomer.sql" />
+    <Build Include="StoredProcedures\InsertSubcontractor.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="ACADB.refactorlog" />

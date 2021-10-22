@@ -95,5 +95,18 @@ namespace ACA.Controllers
                 return Problem(e.Message);
             }
         }
+        [HttpPut("{Id}")]
+        public IActionResult Put([FromRoute] int Id, [FromBody] CustomerAdd form)
+        {
+            try
+            {
+                return Ok(service.Update(Id, form.Map<CustomerClient>()));
+            }
+            catch (Exception e)
+            {
+
+                return Problem(e.Message);
+            }
+        }
     }
 }

@@ -88,8 +88,9 @@ namespace DataAccessLayer.Services
                     cmd.MapToCommand(Entity);
                     cmd.AddParameter("@Id", Id);
                     _co.ExecuteNonQuery(cmd);
+                    Customers result = GetById(Id);
                     scope.Complete();
-                    return GetById(Id);
+                    return result;
                 }
                 catch (Exception)
                 {
