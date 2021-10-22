@@ -42,7 +42,7 @@ namespace DataAccessLayer.Services
             {
                 try
                 {
-                    Command cmd = new("InserOrder", true);
+                    Command cmd = new("InsertOrder", true);
                     cmd.MapToCommand(order);
                     _co.ExecuteNonQuery(cmd);
                     scope.Complete();

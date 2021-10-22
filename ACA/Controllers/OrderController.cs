@@ -48,7 +48,7 @@ namespace ACA.Controllers
             }
         }
         [HttpPost]
-        public IActionResult Post([FromBody]OrderDTO order)
+        public IActionResult Post([FromBody]OrderAdd order)
         {
             try
             {
@@ -61,7 +61,7 @@ namespace ACA.Controllers
                 return Problem(e.Message);
             }
         }
-        [HttpDelete("{Id")]
+        [HttpDelete("{Id}")]
         public IActionResult Delete([FromRoute]int Id)
         {
             try

@@ -9,3 +9,4 @@ C:\Users\Exiteras\Desktop\ACA\ACA\InterfacesACA\obj\Debug\net5.0\InterfacesACA.c
 C:\Users\Exiteras\Desktop\ACA\ACA\InterfacesACA\obj\Debug\net5.0\InterfacesACA.dll
 C:\Users\Exiteras\Desktop\ACA\ACA\InterfacesACA\obj\Debug\net5.0\ref\InterfacesACA.dll
 C:\Users\Exiteras\Desktop\ACA\ACA\InterfacesACA\obj\Debug\net5.0\InterfacesACA.pdb
+C:\Users\Exiteras\Desktop\ACA\ACA\InterfacesACA\obj\Debug\net5.0\InterfacesACA.csproj.AssemblyReference.cache

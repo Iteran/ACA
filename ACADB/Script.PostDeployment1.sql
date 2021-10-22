@@ -10,3 +10,5 @@ Post-Deployment Script Template
 --------------------------------------------------------------------------------------
 */
 insert into BaseProducts (Name,Picture,Description,Quantity) values('TissuBleu','ahjzhrhtht','Tissu mais bleu',10)
+exec InsertUser 't@t','t'
+update Users set IsAdmin = 1 where Id = 1
