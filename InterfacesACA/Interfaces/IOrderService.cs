@@ -8,7 +8,7 @@ namespace InterfacesACA.Interfaces
 {
     public interface IOrderService<T> :ICRUD<T,int>
     {
-        public bool Paid(int Id, T order);
+        public bool Paid(int Id);
        
     }
 }

@@ -3,5 +3,5 @@
 	@email varchar(50),
 	@address varchar(200)
 AS
-	insert into Subcontractors (name,Email,Address) values (@name,@email,@address)
+	insert into Subcontractors (Name,Email,Address) values (@name,@email,@address)
 RETURN 0

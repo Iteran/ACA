@@ -79,14 +79,13 @@ namespace DataAccessLayer.Services
                 }
             }
         }
-        public bool Paid(int Id, Order order)
+        public bool Paid(int Id)
         {
-            Order test = GetById(Id);
-            if (test == null) return false;
+            
             Command cmd = new Command("Update Orders set IsPaid = 1 where Id = @id");
             cmd.AddParameter("@id", Id);
-            _co.ExecuteNonQuery(cmd);
-            return true;
+
+            return _co.ExecuteNonQuery(cmd) == 1; 
         }
 
         public Order Update(int Id, Order Entity)

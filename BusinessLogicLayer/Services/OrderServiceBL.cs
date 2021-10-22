@@ -35,9 +35,9 @@ namespace BusinessLogicLayer.Services
         {
             return _orderService.Delete(Id);
         }
-        public bool Paid(int Id, OrderClient order)
+        public bool Paid(int Id)
         {
-            return _orderService.Paid(Id, order.Map<Order>());
+            return _orderService.Paid(Id);
         }
 
         public OrderClient Update(int Id, OrderClient Entity)

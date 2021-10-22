@@ -77,6 +77,19 @@ namespace ACA.Controllers
             
 
         }
+        [HttpPatch("{Id}")]
+        public IActionResult Patch([FromRoute]int Id)
+        {
+            try
+            {
+                return Ok(_orderServiceBL.Paid(Id));
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
         
     }
 }
