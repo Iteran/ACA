@@ -1325,6 +1325,159 @@ RETURN 0]]></Value>
 				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[InsertCustomer]&#xD;&#xA;&#x9;@name varchar(20),&#xD;&#xA;&#x9;@firstName varchar(20),&#xD;&#xA;&#x9;@email varchar(50),&#xD;&#xA;&#x9;@address varchar(200),&#xD;&#xA;&#x9;@businessName varchar(100),&#xD;&#xA;&#x9;@phoneNumber varchar(20)&#xD;&#xA;&#x9;&#xD;&#xA;AS" />
 			</Annotation>
 		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[InsertManufacturing]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	insert into Manufacturing (DateStart,DeadLine,Total,DownPayment,CustomerId,Status) values(@dateStart,@deadLine,@total,@downPayment,@customerId,@status)
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Manufacturing]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Manufacturing].[DateStart]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Manufacturing].[DeadLine]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Manufacturing].[Total]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Manufacturing].[DownPayment]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Manufacturing].[CustomerId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Manufacturing].[Status]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[InsertManufacturing].[@dateStart]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[InsertManufacturing].[@deadLine]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[InsertManufacturing].[@total]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[InsertManufacturing].[@downPayment]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[InsertManufacturing].[@customerId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[InsertManufacturing].[@status]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[InsertManufacturing].[@dateStart]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[date]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[InsertManufacturing].[@deadLine]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[date]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[InsertManufacturing].[@total]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[money]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[InsertManufacturing].[@downPayment]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[money]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[InsertManufacturing].[@customerId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[InsertManufacturing].[@status]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="30" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="328" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[InsertManufacturing]&#xD;&#xA;&#x9;@dateStart date,&#xD;&#xA;&#x9;@deadLine date,&#xD;&#xA;&#x9;@total money,&#xD;&#xA;&#x9;@downPayment money,&#xD;&#xA;&#x9;@customerId int,&#xD;&#xA;&#x9;@status varchar(30)&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
 		<Element Type="SqlProcedure" Name="[dbo].[InsertOrder]">
 			<Property Name="BodyScript">
 				<Value><![CDATA[
@@ -2545,6 +2698,181 @@ RETURN 0]]></Value>
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
 				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[UpdateCustomer]&#xD;&#xA;&#x9;@name varchar(20),&#xD;&#xA;&#x9;@firstName varchar(20),&#xD;&#xA;&#x9;@email varchar(50),&#xD;&#xA;&#x9;@address varchar(200),&#xD;&#xA;&#x9;@businessName varchar(100),&#xD;&#xA;&#x9;@phoneNumber varchar(20),&#xD;&#xA;&#x9;@Id int&#xD;&#xA;&#x9;&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[UpdateManufacturing]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	update Manufacturing set DateStart = @dateStart, DeadLine = @deadLine, Total = @total, DownPayment = @downPayment
+	,CustomerId = @customerId, status = @status where Id = @Id
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Manufacturing]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Manufacturing].[DateStart]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateManufacturing].[@dateStart]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Manufacturing].[DeadLine]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateManufacturing].[@deadLine]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Manufacturing].[Total]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateManufacturing].[@total]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Manufacturing].[DownPayment]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateManufacturing].[@downPayment]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Manufacturing].[CustomerId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateManufacturing].[@customerId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Manufacturing].[Status]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateManufacturing].[@status]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Manufacturing].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateManufacturing].[@Id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateManufacturing].[@Id]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateManufacturing].[@dateStart]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[date]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateManufacturing].[@deadLine]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[date]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateManufacturing].[@total]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[money]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateManufacturing].[@downPayment]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[money]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateManufacturing].[@customerId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateManufacturing].[@status]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="30" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="362" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[UpdateManufacturing]&#xD;&#xA;&#x9;@Id int,&#xD;&#xA;&#x9;@dateStart date,&#xD;&#xA;&#x9;@deadLine date,&#xD;&#xA;&#x9;@total money,&#xD;&#xA;&#x9;@downPayment money,&#xD;&#xA;&#x9;@customerId int,&#xD;&#xA;&#x9;@status varchar(30)&#xD;&#xA;AS" />
 			</Annotation>
 		</Element>
 		<Element Type="SqlProcedure" Name="[dbo].[UpdatePassword]">

@@ -85,12 +85,15 @@
     <Build Include="StoredProcedures\LoginUser.sql" />
     <Build Include="Views\V_Users.sql" />
     <Build Include="StoredProcedures\InsertOrderBaseProduct.sql" />
+    <Build Include="StoredProcedures\InsertManufacturing.sql" />
+    <Build Include="StoredProcedures\UpdateManufacturing.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="ACADB.refactorlog" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ACADB.publish.xml" />
+    <None Include="ACADBPortable.publish.xml" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Script.PostDeployment1.sql" />
