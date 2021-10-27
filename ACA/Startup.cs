@@ -42,6 +42,9 @@ namespace ACA
             services.AddScoped<ICustomerService<CustomerClient>, CustomerServiceBL>();
             services.AddScoped<ICRUD<Subcontractors, int>, SubcontractorService>();
             services.AddScoped<ICRUD<SubcontractorClient, int>, SubcontractorServiceBL>();
+            services.AddScoped<IUserService<Users>, UserService>();
+            services.AddScoped<IUserService<UserClient>, UserServiceBL>();
+
 
 
             services.AddSwaggerGen(c =>

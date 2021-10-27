@@ -18,3 +18,13 @@ C:\Users\Exiteras\Desktop\ACA\ACA\ACADB\obj\Debug\Model.xml
 C:\Users\Exiteras\Desktop\ACA\ACA\ACADB\obj\Debug\refactor.xml
 C:\Users\Exiteras\Desktop\ACA\ACA\ACADB\obj\Debug\postdeploy.sql
 C:\Users\Exiteras\Desktop\ACA\ACA\ACADB\obj\Debug\predeploy.sql
+C:\Users\tomro\OneDrive\Bureau\ACA\ACA\ACADB\bin\Debug\ACADB.dacpac
+C:\Users\tomro\OneDrive\Bureau\ACA\ACA\ACADB\bin\Debug\ACADB.dll
+C:\Users\tomro\OneDrive\Bureau\ACA\ACA\ACADB\bin\Debug\ACADB.pdb
+C:\Users\tomro\OneDrive\Bureau\ACA\ACA\ACADB\obj\Debug\ACADB.sqlproj.AssemblyReference.cache
+C:\Users\tomro\OneDrive\Bureau\ACA\ACA\ACADB\obj\Debug\ACADB.dll
+C:\Users\tomro\OneDrive\Bureau\ACA\ACA\ACADB\obj\Debug\ACADB.pdb
+C:\Users\tomro\OneDrive\Bureau\ACA\ACA\ACADB\obj\Debug\Model.xml
+C:\Users\tomro\OneDrive\Bureau\ACA\ACA\ACADB\obj\Debug\refactor.xml
+C:\Users\tomro\OneDrive\Bureau\ACA\ACA\ACADB\obj\Debug\postdeploy.sql
+C:\Users\tomro\OneDrive\Bureau\ACA\ACA\ACADB\obj\Debug\predeploy.sql

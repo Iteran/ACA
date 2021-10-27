@@ -10,3 +10,15 @@ C:\Users\Exiteras\Desktop\ACA\ACA\InterfacesACA\obj\Debug\net5.0\InterfacesACA.d
 C:\Users\Exiteras\Desktop\ACA\ACA\InterfacesACA\obj\Debug\net5.0\ref\InterfacesACA.dll
 C:\Users\Exiteras\Desktop\ACA\ACA\InterfacesACA\obj\Debug\net5.0\InterfacesACA.pdb
 C:\Users\Exiteras\Desktop\ACA\ACA\InterfacesACA\obj\Debug\net5.0\InterfacesACA.csproj.AssemblyReference.cache
+C:\Users\tomro\OneDrive\Bureau\ACA\ACA\InterfacesACA\bin\Debug\net5.0\InterfacesACA.deps.json
+C:\Users\tomro\OneDrive\Bureau\ACA\ACA\InterfacesACA\bin\Debug\net5.0\InterfacesACA.dll
+C:\Users\tomro\OneDrive\Bureau\ACA\ACA\InterfacesACA\bin\Debug\net5.0\ref\InterfacesACA.dll
+C:\Users\tomro\OneDrive\Bureau\ACA\ACA\InterfacesACA\bin\Debug\net5.0\InterfacesACA.pdb
+C:\Users\tomro\OneDrive\Bureau\ACA\ACA\InterfacesACA\obj\Debug\net5.0\InterfacesACA.csproj.AssemblyReference.cache
+C:\Users\tomro\OneDrive\Bureau\ACA\ACA\InterfacesACA\obj\Debug\net5.0\InterfacesACA.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tomro\OneDrive\Bureau\ACA\ACA\InterfacesACA\obj\Debug\net5.0\InterfacesACA.AssemblyInfoInputs.cache
+C:\Users\tomro\OneDrive\Bureau\ACA\ACA\InterfacesACA\obj\Debug\net5.0\InterfacesACA.AssemblyInfo.cs
+C:\Users\tomro\OneDrive\Bureau\ACA\ACA\InterfacesACA\obj\Debug\net5.0\InterfacesACA.csproj.CoreCompileInputs.cache
+C:\Users\tomro\OneDrive\Bureau\ACA\ACA\InterfacesACA\obj\Debug\net5.0\InterfacesACA.dll
+C:\Users\tomro\OneDrive\Bureau\ACA\ACA\InterfacesACA\obj\Debug\net5.0\ref\InterfacesACA.dll
+C:\Users\tomro\OneDrive\Bureau\ACA\ACA\InterfacesACA\obj\Debug\net5.0\InterfacesACA.pdb

@@ -11,7 +11,10 @@ namespace DataAccessLayer.Entities
     {
         [MapIgnore]
         public int Id { get; set; }
+        [MapIgnore]
+        [ReadIgnore]
         public bool IsAdmin { get; set; }
+        [ReadIgnore]
         public string Password { get; set; }
         public string Email { get; set; }
     }

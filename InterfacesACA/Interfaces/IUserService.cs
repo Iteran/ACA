@@ -9,5 +9,6 @@ namespace InterfacesACA.Interfaces
     public interface IUserService<T> : ICRUD<T,int>
     {
         public bool ModifyPassword(int Id, string NewPwd);
+        public T Login(string email, string password);
     }
 }

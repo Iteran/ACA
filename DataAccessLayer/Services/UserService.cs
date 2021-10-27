@@ -31,8 +31,9 @@ namespace DataAccessLayer.Services
             {
                 try
                 {
-                    Command cmd = new("InserUser", true);
+                    Command cmd = new("InsertUser", true);
                     cmd.MapToCommand(Entity);
+                   
                     _co.ExecuteNonQuery(cmd);
                     scope.Complete();
                 }
@@ -53,7 +54,9 @@ namespace DataAccessLayer.Services
                 {
                     Command cmd = new("Delete FROM Users where Id = @Id");
                     cmd.AddParameter("@Id", Id);
-                    return _co.ExecuteNonQuery(cmd) == 1;
+                    int rep = _co.ExecuteNonQuery(cmd);
+                    scope.Complete();
+                    return rep == 1;
                 }
                 catch (Exception)
                 {
@@ -65,15 +68,33 @@ namespace DataAccessLayer.Services
 
         public IEnumerable<Users> GetAll()
         {
-            Command cmd = new("Select Email from Users");
+            Command cmd = new("Select * from V_Users");
             return _co.ExecuteReader<Users>(cmd, Convert);
         }
 
         public Users GetById(int Id)
         {
-            Command cmd = new("select * from Users where Id = @Id");
+            Command cmd = new("select * from V_Users where Id = @Id");
             cmd.AddParameter("@Id", Id);
             return _co.ExecuteReader<Users>(cmd, Convert).FirstOrDefault();
+        }
+
+        public Users Login(string email, string password)
+        {
+            Command cmd = new("LoginUser", true);
+            cmd.AddParameter("@email", email);
+            
+            try
+            {
+                int Id = (int)_co.ExecuteScalar(cmd);
+                
+                return GetById(Id);
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
         }
 
         public bool ModifyPassword(int Id, string NewPwd)
@@ -81,13 +102,16 @@ namespace DataAccessLayer.Services
             Command cmd = new("UpdatePassword", true);
             cmd.AddParameter("@Id", Id);
             cmd.AddParameter("@newPwd", NewPwd);
+           
             return _co.ExecuteNonQuery(cmd) == 1;
         }
 
         public Users Update(int Id, Users Entity)
         {
             Command cmd = new("UpdateUser", true);
-            cmd.MapToCommand(Entity);
+
+
+            cmd.AddParameter("@email", Entity.Email);
             cmd.AddParameter("@id", Id);
             _co.ExecuteNonQuery(cmd);
             return GetById(Id);

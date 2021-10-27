@@ -73,8 +73,8 @@ namespace Mappers
             where TTo : new()
         {
             TTo result = new TTo();
-            PropertyInfo[] toProperties = typeof(TTo).GetProperties();
-            foreach (PropertyInfo item in toProperties)
+            var Properties = typeof(TTo).GetProperties().Where(prop => prop.GetCustomAttribute<ReadIgnoreAttribute>()==null);
+            foreach (PropertyInfo item in Properties)
             {
                 
 
