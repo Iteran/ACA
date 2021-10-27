@@ -1435,6 +1435,95 @@ RETURN 0]]></Value>
 				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[InsertOrder]&#xD;&#xA;&#x9;@date date,&#xD;&#xA;&#x9;@customerId int,&#xD;&#xA;&#x9;@total money,&#xD;&#xA;&#x9;@isPaid bit&#xD;&#xA;AS" />
 			</Annotation>
 		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[InsertOrderBaseProduct]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	insert into OrderBaseProduct(BaseProductId,OrderId,Quantity) values (@baseProductId,@orderId,@quantity)
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[OrderBaseProduct]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[OrderBaseProduct].[BaseProductId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[OrderBaseProduct].[OrderId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[OrderBaseProduct].[Quantity]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[InsertOrderBaseProduct].[@baseProductId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[InsertOrderBaseProduct].[@orderId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[InsertOrderBaseProduct].[@quantity]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[InsertOrderBaseProduct].[@baseProductId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[InsertOrderBaseProduct].[@orderId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[InsertOrderBaseProduct].[@quantity]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="222" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[InsertOrderBaseProduct]&#xD;&#xA;&#x9;@baseProductId int ,&#xD;&#xA;&#x9;@orderId int,&#xD;&#xA;&#x9;@quantity int&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
 		<Element Type="SqlProcedure" Name="[dbo].[InsertSubcontractor]">
 			<Property Name="BodyScript">
 				<Value><![CDATA[

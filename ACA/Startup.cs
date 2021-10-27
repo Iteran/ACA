@@ -44,6 +44,10 @@ namespace ACA
             services.AddScoped<ICRUD<SubcontractorClient, int>, SubcontractorServiceBL>();
             services.AddScoped<IUserService<Users>, UserService>();
             services.AddScoped<IUserService<UserClient>, UserServiceBL>();
+            services.AddScoped<ICRUD<OrderBaseProduct, int>, OrderBaseProductService>();
+            services.AddScoped<ICRUD<OrderBaseProductClient, int>, OrderBaseProductServiceBL>();
+
+
 
 
 

@@ -84,6 +84,7 @@
     <Build Include="StoredProcedures\UpdatePassword.sql" />
     <Build Include="StoredProcedures\LoginUser.sql" />
     <Build Include="Views\V_Users.sql" />
+    <Build Include="StoredProcedures\InsertOrderBaseProduct.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="ACADB.refactorlog" />
