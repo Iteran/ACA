@@ -5,5 +5,5 @@
 	@subcontractorId int,
 	@subcontractorCut money
 AS
-	update ContractManufacturing set date = @date, ManufacturingId = @manufacturingId, SubcontractorId = @subcontractorId, SubcontractorCut = @subcontractorCut where Id = @Id
+	update ContractManufacturing set Date = @date, ManufacturingId = @manufacturingId, SubcontractorId = @subcontractorId, SubcontractorCut = @subcontractorCut where Id = @Id
 RETURN 0

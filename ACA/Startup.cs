@@ -1,9 +1,11 @@
+using ACA.Token;
 using BusinessLogicLayer.Data;
 using BusinessLogicLayer.Services;
 using DataAccessLayer.Entities;
 
 using DataAccessLayer.Services;
 using InterfacesACA.Interfaces;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -12,10 +14,12 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace ACA
@@ -49,14 +53,8 @@ namespace ACA
             services.AddScoped<IManufacturingService<Manufacturing>, ManufacturingService>();
             services.AddScoped<IManufacturingService<ManufacturingClient>, ManufacturingServiceBL>();
             services.AddScoped<ICRUD<ContractManufacturingClient, int>, ContractManufacturingServiceBL>();
+            services.AddScoped<TokenManager>();
             services.AddScoped<ICRUD<ContractManufacturing, int>, ContractManufacturingService>();
-
-
-
-
-
-
-
 
             services.AddSwaggerGen(c =>
             {
@@ -84,8 +82,29 @@ namespace ACA
                             new string[] {}
                     }
                 });
+                services.AddAuthorization(options =>
+                {
+                    options.AddPolicy("admin", policy => policy.RequireRole("admin"));
+                    options.AddPolicy("user", policy => policy.RequireRole("user", "admin"));
+                });
+                services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+               .AddJwtBearer(options =>
+               {
+                   options.TokenValidationParameters = new()
+                   {
+                       ValidateLifetime = true,
+                       ValidateIssuerSigningKey = true,
+                       IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(TokenManager.SecretKey)),
+                       ValidateIssuer = true,
+                       ValidIssuer = TokenManager.Issuer,
+                       ValidateAudience = true,
+                       ValidAudience = TokenManager.Audience
+                   };
+               });
+
             });
         }
+
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -100,7 +119,7 @@ namespace ACA
             app.UseHttpsRedirection();
 
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

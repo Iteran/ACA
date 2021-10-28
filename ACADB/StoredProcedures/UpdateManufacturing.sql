@@ -8,5 +8,5 @@
 	@status varchar(30)
 AS
 	update Manufacturing set DateStart = @dateStart, DeadLine = @deadLine, Total = @total, DownPayment = @downPayment
-	,CustomerId = @customerId, status = @status where Id = @Id
+	,CustomerId = @customerId, Status = @status where Id = @Id
 RETURN 0

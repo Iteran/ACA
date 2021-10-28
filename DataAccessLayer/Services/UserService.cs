@@ -83,12 +83,13 @@ namespace DataAccessLayer.Services
         {
             Command cmd = new("LoginUser", true);
             cmd.AddParameter("@email", email);
+            cmd.AddParameter("@password", password);
             
             try
             {
-                int Id = (int)_co.ExecuteScalar(cmd);
-                
-                return GetById(Id);
+                Users u = _co.ExecuteReader<Users>(cmd, Convert).FirstOrDefault();
+
+                return u;
             }
             catch (Exception)
             {

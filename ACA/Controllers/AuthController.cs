@@ -1,4 +1,6 @@
 ﻿using ACA.DTO.User;
+using ACA.Token;
+using BusinessLogicLayer.Data;
 using InterfacesACA.Interfaces;
 using Mappers;
 using Microsoft.AspNetCore.Http;
@@ -14,10 +16,12 @@ namespace ACA.Controllers
     [ApiController]
     public class AuthController : ControllerBase
     {
-        private readonly InterfacesACA.Interfaces.IUserService<UserDTO> service;
+        private readonly InterfacesACA.Interfaces.IUserService<UserClient> service;
+        private readonly TokenManager _token;
 
-        public AuthController(IUserService<UserDTO> service)
+        public AuthController(IUserService<UserClient> service, TokenManager token)
         {
+            _token = token;
             this.service = service;
         }
         [HttpPost("Login")]
@@ -27,17 +31,11 @@ namespace ACA.Controllers
             {
 
                 UserDTO u = new UserDTO();
-                if (ModelState.IsValid) u = service.Login(user.Email, user.Password).Map<UserDTO>();
+                if (ModelState.IsValid) u = _token.Authenticate(service.Login(user.Email, user.Password).Map<UserDTO>());
 
-                if (u is not null)
-                {
-                    return Ok(u);
-                }
+                if (u is null) return new ForbidResult("Interdit");
 
-                else
-                {
-                    return BadRequest();
-                }
+                return Ok(u);
             }
             catch (Exception e)
             {
