@@ -12,7 +12,7 @@
 		</CustomData>
 		<CustomData Category="Reference" Type="Assembly">
 			<Metadata Name="LogicalName" Value="ACADB.dll" />
-			<Metadata Name="FileName" Value="C:\USERS\TOMRO\ONEDRIVE\BUREAU\ACA\ACA\ACADB\OBJ\DEBUG\ACADB.DLL" />
+			<Metadata Name="FileName" Value="C:\USERS\EXITERAS\DESKTOP\ACA\ACA\ACADB\OBJ\DEBUG\ACADB.DLL" />
 			<Metadata Name="AssemblyName" Value="ACADB" />
 			<Metadata Name="PermissionSet" Value="SAFE" />
 			<Metadata Name="Owner" Value="" />
@@ -20,7 +20,7 @@
 			<Metadata Name="IsVisible" Value="True" />
 			<Metadata Name="IsModelAware" Value="True" />
 			<Metadata Name="SkipCreationIfEmpty" Value="True" />
-			<Metadata Name="AssemblySymbolsName" Value="C:\Users\tomro\OneDrive\Bureau\ACA\ACA\ACADB\obj\Debug\ACADB.pdb" />
+			<Metadata Name="AssemblySymbolsName" Value="C:\Users\Exiteras\Desktop\ACA\ACA\ACADB\obj\Debug\ACADB.pdb" />
 		</CustomData>
 		<CustomData Category="SqlCmdVariables" Type="SqlCmdVariable" />
 	</Header>
@@ -1165,6 +1165,116 @@ RETURN 0]]></Value>
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
 				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[InsertBaseProduct]&#xD;&#xA;&#x9;@name varchar(40),&#xD;&#xA;&#x9;@picture varchar(200),&#xD;&#xA;&#x9;@description varchar(200),&#xD;&#xA;&#x9;@quantity int&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[InsertContractManufacturing]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	insert into ContractManufacturing (Date,ManufacturingId,SubcontractorCut,SubcontractorId) values(@date,@manufacturingId,@subcontractorCut,@subcontractorId)
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[ContractManufacturing]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[ContractManufacturing].[Date]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[ContractManufacturing].[ManufacturingId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[ContractManufacturing].[SubcontractorCut]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[ContractManufacturing].[SubcontractorId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[InsertContractManufacturing].[@date]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[InsertContractManufacturing].[@manufacturingId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[InsertContractManufacturing].[@subcontractorCut]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[InsertContractManufacturing].[@subcontractorId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[InsertContractManufacturing].[@date]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[date]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[InsertContractManufacturing].[@manufacturingId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[InsertContractManufacturing].[@subcontractorId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[InsertContractManufacturing].[@subcontractorCut]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[money]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="312" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[InsertContractManufacturing]&#xD;&#xA;&#x9;@date date,&#xD;&#xA;&#x9;@manufacturingId int,&#xD;&#xA;&#x9;@subcontractorId int,&#xD;&#xA;&#x9;@subcontractorCut money&#xD;&#xA;AS" />
 			</Annotation>
 		</Element>
 		<Element Type="SqlProcedure" Name="[dbo].[InsertCustomer]">
@@ -2519,6 +2629,137 @@ RETURN 0]]></Value>
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
 				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[UpdateBaseProduct]&#xD;&#xA;&#x9;@name varchar(40),&#xD;&#xA;&#x9;@picture varchar(200) = 0,&#xD;&#xA;&#x9;@description varchar(300),&#xD;&#xA;&#x9;@quantity int,&#xD;&#xA;&#x9;@id int&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[UpdateContractManufacturing]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	update ContractManufacturing set date = @date, ManufacturingId = @manufacturingId, SubcontractorId = @subcontractorId, SubcontractorCut = @subcontractorCut where Id = @Id
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[ContractManufacturing]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[ContractManufacturing].[Date]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateContractManufacturing].[@date]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[ContractManufacturing].[ManufacturingId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateContractManufacturing].[@manufacturingId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[ContractManufacturing].[SubcontractorId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateContractManufacturing].[@subcontractorId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[ContractManufacturing].[SubcontractorCut]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateContractManufacturing].[@subcontractorCut]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[ContractManufacturing].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateContractManufacturing].[@Id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateContractManufacturing].[@Id]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateContractManufacturing].[@date]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[date]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateContractManufacturing].[@manufacturingId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateContractManufacturing].[@subcontractorId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateContractManufacturing].[@subcontractorCut]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[money]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="338" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[UpdateContractManufacturing]&#xD;&#xA;&#x9;@Id int,&#xD;&#xA;&#x9;@date date,&#xD;&#xA;&#x9;@manufacturingId int,&#xD;&#xA;&#x9;@subcontractorId int,&#xD;&#xA;&#x9;@subcontractorCut money&#xD;&#xA;AS" />
 			</Annotation>
 		</Element>
 		<Element Type="SqlProcedure" Name="[dbo].[UpdateCustomer]">

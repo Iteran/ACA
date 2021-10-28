@@ -87,6 +87,8 @@
     <Build Include="StoredProcedures\InsertOrderBaseProduct.sql" />
     <Build Include="StoredProcedures\InsertManufacturing.sql" />
     <Build Include="StoredProcedures\UpdateManufacturing.sql" />
+    <Build Include="StoredProcedures\InsertContractManufacturing.sql" />
+    <Build Include="StoredProcedures\UpdateContractManufacturing.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="ACADB.refactorlog" />

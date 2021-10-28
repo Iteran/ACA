@@ -48,6 +48,10 @@ namespace ACA
             services.AddScoped<ICRUD<OrderBaseProductClient, int>, OrderBaseProductServiceBL>();
             services.AddScoped<IManufacturingService<Manufacturing>, ManufacturingService>();
             services.AddScoped<IManufacturingService<ManufacturingClient>, ManufacturingServiceBL>();
+            services.AddScoped<ICRUD<ContractManufacturingClient, int>, ContractManufacturingServiceBL>();
+            services.AddScoped<ICRUD<ContractManufacturing, int>, ContractManufacturingService>();
+
+
 
 
 
@@ -57,6 +61,29 @@ namespace ACA
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ACA", Version = "v1" });
+                c.AddSecurityDefinition("bearerAuth", new OpenApiSecurityScheme
+                {
+                    Name = "Authorization",
+                    Type = SecuritySchemeType.Http,
+                    Scheme = "bearer",
+                    BearerFormat = "JWT",
+                    In = ParameterLocation.Header,
+                    Description = "JWT Authorization header using the Bearer scheme."
+                });
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement
+                {
+                    {
+                          new OpenApiSecurityScheme
+                            {
+                                Reference = new OpenApiReference
+                                {
+                                    Type = ReferenceType.SecurityScheme,
+                                    Id = "bearerAuth"
+                                }
+                            },
+                            new string[] {}
+                    }
+                });
             });
         }
 
