@@ -1,4 +1,4 @@
-﻿using ACA.DTO.ContactManufacturing;
+﻿using ACA.Models.ContactManufacturing;
 using BusinessLogicLayer.Data;
 using InterfacesACA.Interfaces;
 using Mappers;
@@ -53,7 +53,7 @@ namespace ACA.Controllers
         {
             try
             {
-                ContractManufacturingDTO Cm = service.GetById(Id).Map<ContractManufacturingDTO>();
+                ContractManufacturingClient Cm = service.GetById(Id);
                 if (Cm.Id != 0) return Ok(Cm);
                 else return BadRequest();
             }
@@ -68,7 +68,7 @@ namespace ACA.Controllers
         {
             try
             {
-                ContractManufacturingDTO cm = service.Update(Id,entity.Map<ContractManufacturingClient>()).Map<ContractManufacturingDTO>();
+                ContractManufacturingClient cm = service.Update(Id,entity.Map<ContractManufacturingClient>());
                 if (cm.Id != 0) return Ok(cm);
                 else return BadRequest();
             }

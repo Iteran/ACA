@@ -5,8 +5,9 @@ using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
-using ACA.DTO;
-using ACA.DTO.User;
+using ACA.Models;
+using ACA.Models.User;
+using BusinessLogicLayer.Data;
 using Microsoft.IdentityModel.Tokens;
 
 namespace ACA.Token
@@ -17,7 +18,7 @@ namespace ACA.Token
         public static string Issuer = "Monsite.com";
         public static string Audience = "Maconso.com";
 
-        public UserDTO Authenticate(UserDTO user)
+        public UserClient Authenticate(UserClient user)
         {
             if (user.Email is null)
             {

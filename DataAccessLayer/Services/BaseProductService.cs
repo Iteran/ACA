@@ -96,5 +96,16 @@ namespace DataAccessLayer.Services
             _co.ExecuteNonQuery(cmd);
 
         }
+        public void DeleteQuantity(int Id, int value)
+        {
+            if (value <= 0)
+            {
+                throw new Exception(message: "Impossible d'ajouter un nombre inférieur ou égal à 0");
+            }
+            Data.Command cmd = new("update BaseProducts set Quantity =  Quantity - @quantity where Id = @id");
+            cmd.AddParameter("@quantity", value);
+            cmd.AddParameter("@id", Id);
+            _co.ExecuteNonQuery(cmd);
+        }
     }
 }

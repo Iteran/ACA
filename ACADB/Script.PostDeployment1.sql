@@ -14,5 +14,6 @@ exec InsertUser 't@t','t'
 update Users set IsAdmin = 1 where Id = 1
 exec InsertCustomer 'Rog','Tom','t@t','LaRueOk','ACA','15151056521'
 
-Declare @date date = getdate()
-exec InsertOrder @date,1,200,0
+Declare @date date = '2021-10-30'
+exec InsertOrder @date,1,0
+insert into OrderBaseProduct (BaseProductId,OrderId,Quantity) values(1,1,4)

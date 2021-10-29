@@ -44,5 +44,9 @@ namespace BusinessLogicLayer.Services
         {
             _baseProductService.AddQuantity(Id, value);
         }
+        public void DeleteQuantity(int Id, int value)
+        {
+            _baseProductService.DeleteQuantity(Id, value);
+        }
     }
 }

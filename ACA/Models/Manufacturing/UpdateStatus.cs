@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ACA.DTO.Manufacturing
+namespace ACA.Models.Manufacturing
 {
     public class UpdateStatus
     {

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ACA.DTO.BaseProduct
+namespace ACA.Models.BaseProduct
 {
-    public class BaseProductDTO
+    public class AddBaseProduct
     {
         public string Name { get; set; }
         public string Picture { get; set; }

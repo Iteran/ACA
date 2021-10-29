@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ACA.DTO.User
+namespace ACA.Models.User
 {
-    public class LoginUser
+    public class UserModify
     {
         public string Email { get; set; }
-        public string Password { get; set; }
     }
 }

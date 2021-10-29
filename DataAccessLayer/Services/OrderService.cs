@@ -14,7 +14,7 @@ using InterfacesACA.Interfaces;
 
 namespace DataAccessLayer.Services
 {
-    public class OrderService : IOrderService<Order>
+    public class OrderService : IOrderService<Order,OrderDetails>
     {
         private Connection _co { get; set; }
         public OrderService(IConfiguration config)
@@ -24,6 +24,10 @@ namespace DataAccessLayer.Services
         private Order Convert(IDataRecord reader)
         {
             return reader.MapReader<Order>();
+        }
+        private OrderDetails ConvertDetails(IDataRecord reader)
+        {
+            return reader.MapReader<OrderDetails>();
         }
         public IEnumerable<Order> GetAll()
         {
@@ -91,6 +95,12 @@ namespace DataAccessLayer.Services
         public Order Update(int Id, Order Entity)
         {
             throw new NotImplementedException();
+        }
+        public IEnumerable<OrderDetails> GetDetails(int orderId)
+        {
+            Command cmd = new("select * from V_OrderDetail where Id = @Id");
+            cmd.AddParameter("@Id", orderId);
+            return _co.ExecuteReader<OrderDetails>(cmd, ConvertDetails);
         }
     }
 }

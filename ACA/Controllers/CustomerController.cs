@@ -1,4 +1,4 @@
-﻿using ACA.DTO.Customer;
+﻿using ACA.Models.Customer;
 using BusinessLogicLayer.Data;
 using InterfacesACA.Interfaces;
 using Mappers;

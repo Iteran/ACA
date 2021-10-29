@@ -1,4 +1,4 @@
-﻿using ACA.DTO.User;
+﻿using ACA.Models.User;
 using ACA.Token;
 using BusinessLogicLayer.Data;
 using InterfacesACA.Interfaces;
@@ -30,8 +30,8 @@ namespace ACA.Controllers
             try
             {
 
-                UserDTO u = new UserDTO();
-                if (ModelState.IsValid) u = _token.Authenticate(service.Login(user.Email, user.Password).Map<UserDTO>());
+                UserClient u = new UserClient();
+                if (ModelState.IsValid) u = _token.Authenticate(service.Login(user.Email, user.Password).Map<UserClient>());
 
                 if (u is null) return new ForbidResult("Interdit");
 

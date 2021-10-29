@@ -1,4 +1,4 @@
-﻿using ACA.DTO.BaseProduct;
+﻿using ACA.Models.BaseProduct;
 using BusinessLogicLayer.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -33,7 +33,7 @@ namespace ACA.Controllers
             return Ok(_baseProductService.GetById(Id));
         }
         [HttpPost]
-        public IActionResult Post([FromBody]BaseProductDTO product)
+        public IActionResult Post([FromBody]AddBaseProduct product)
         {
             try
             {
@@ -49,14 +49,21 @@ namespace ACA.Controllers
             
         }
         [HttpPut("{Id}")]
-        public IActionResult Put([FromRoute] int Id, [FromBody] BaseProductDTO ModifiedProduct)
+        public IActionResult Put([FromRoute] int Id, [FromBody] BaseProductClient ModifiedProduct)
         {
-            return Ok(_baseProductService.Update(Id, ModifiedProduct.Map<BaseProductClient>()));
+            return Ok(_baseProductService.Update(Id, ModifiedProduct));
         }
-        [HttpPatch("{Id}")]
-        public IActionResult Patch([FromRoute] int Id, int QuantityAdd)
+        [HttpPatch("Add/{Id}")]
+        public IActionResult AddQuantity([FromRoute] int Id, int QuantityAdd)
         {
             _baseProductService.AddQuantity(Id, QuantityAdd);
+            return Ok();
+        }
+        [HttpPatch("Delete/{Id}")]
+        
+        public IActionResult DeleteQuantity([FromRoute]int Id, int QuantityDel)
+        {
+            _baseProductService.DeleteQuantity(Id, QuantityDel);
             return Ok();
         }
         [HttpDelete("{Id}")]

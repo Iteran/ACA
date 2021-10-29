@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ACA.DTO.User
+namespace ACA.Models.Subcontractor
 {
-    public class UserModify
+    public class SubcontractorAdd
     {
+        public string Name { get; set; }
         public string Email { get; set; }
+        public string Address { get; set; }
     }
 }

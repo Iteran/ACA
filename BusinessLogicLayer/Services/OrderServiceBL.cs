@@ -11,17 +11,19 @@ using System.Threading.Tasks;
 
 namespace BusinessLogicLayer.Services
 {
-    public class OrderServiceBL : IOrderService<OrderClient>
+    public class OrderServiceBL : IOrderService<OrderClient,OrderDetailsClient>
     {
-        private readonly IOrderService<Order> _orderService;
-        public OrderServiceBL(IOrderService<Order> service)
+        private readonly IOrderService<Order,OrderDetails> _orderService;
+        public OrderServiceBL(IOrderService<Order,OrderDetails> service)
         {
             _orderService = service;
         }
 
         public IEnumerable<OrderClient> GetAll()
         {
-            return _orderService.GetAll().Select(c => c.Map<OrderClient>());
+            IEnumerable<OrderClient> orderClients = _orderService.GetAll().Select(c => c.Map<OrderClient>());
+            orderClients = orderClients?.Select(o => { o.orderDetails = _orderService.GetDetails(o.Id).Select(od => od.Map<OrderDetailsClient>()); return o; });
+            return orderClients;
         }
         public OrderClient GetById(int Id)
         {
@@ -41,6 +43,11 @@ namespace BusinessLogicLayer.Services
         }
 
         public OrderClient Update(int Id, OrderClient Entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<OrderDetailsClient> GetDetails(int orderId)
         {
             throw new NotImplementedException();
         }

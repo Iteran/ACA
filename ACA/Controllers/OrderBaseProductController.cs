@@ -1,4 +1,4 @@
-﻿using ACA.DTO.OrderBaseProduct;
+﻿using ACA.Models.OrderBaseProduct;
 using BusinessLogicLayer.Data;
 using InterfacesACA.Interfaces;
 using Mappers;
@@ -53,7 +53,7 @@ namespace ACA.Controllers
         {
             try
             {
-                OrderBaseProductDTO order = service.GetById(Id).Map<OrderBaseProductDTO>();
+                OrderBaseProductClient order = service.GetById(Id);
                 if ( order.Id != 0)
                 {
                     return Ok(order);

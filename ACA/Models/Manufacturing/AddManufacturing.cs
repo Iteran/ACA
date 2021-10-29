@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ACA.DTO.Manufacturing
+namespace ACA.Models.Manufacturing
 {
-    public class ManufacturingDTO
+    public class AddManufacturing
     {
-        public int Id { get; set; }
+        
         public DateTime DateStart { get; set; }
         public DateTime DeadLine { get; set; }
         public decimal Total { get; set; }

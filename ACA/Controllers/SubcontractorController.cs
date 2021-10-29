@@ -1,4 +1,4 @@
-﻿using ACA.DTO.Subcontractor;
+﻿using ACA.Models.Subcontractor;
 using BusinessLogicLayer.Data;
 using InterfacesACA.Interfaces;
 using Mappers;

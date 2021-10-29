@@ -1,4 +1,4 @@
-﻿using ACA.DTO.Manufacturing;
+﻿using ACA.Models.Manufacturing;
 using BusinessLogicLayer.Data;
 using InterfacesACA.Interfaces;
 using Mappers;
@@ -53,7 +53,7 @@ namespace ACA.Controllers
         {
             try
             {
-                ManufacturingDTO entity = service.GetById(Id).Map<ManufacturingDTO>();
+                ManufacturingClient entity = service.GetById(Id).Map<ManufacturingClient>();
                 if (entity.Id != 0) return Ok(entity);
                 else return BadRequest();
             }
@@ -68,7 +68,7 @@ namespace ACA.Controllers
         {
             try
             {
-                ManufacturingDTO m = service.Update(Id, body.Map<ManufacturingClient>()).Map<ManufacturingDTO>();
+                ManufacturingClient m = service.Update(Id, body.Map<ManufacturingClient>()).Map<ManufacturingClient>();
                 if (m.Id != 0) return Ok(m);
                 else return BadRequest();
             }
@@ -83,7 +83,7 @@ namespace ACA.Controllers
         {
             try
             {
-                ManufacturingDTO m = service.UpdateStatus(Id, NewStatus.NewStatus).Map<ManufacturingDTO>();
+                ManufacturingClient m = service.UpdateStatus(Id, NewStatus.NewStatus).Map<ManufacturingClient>();
                 if (m.Id != 0) return Ok(m);
                 else return BadRequest();
             }

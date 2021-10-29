@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace InterfacesACA.Interfaces
 {
-    public interface IOrderService<T> :ICRUD<T,int>
+    public interface IOrderService<T,TT> :ICRUD<T,int>
     {
         public bool Paid(int Id);
-       
+        public IEnumerable<TT> GetDetails(int orderId);
+
+
     }
 }

@@ -1,4 +1,4 @@
-﻿using ACA.DTO.Order;
+﻿using ACA.Models.Order;
 using BusinessLogicLayer.Data;
 using BusinessLogicLayer.Services;
 using InterfacesACA.Interfaces;
@@ -16,8 +16,8 @@ namespace ACA.Controllers
     [ApiController]
     public class OrderController : ControllerBase
     {
-        private readonly IOrderService<OrderClient> _orderServiceBL;
-        public OrderController(IOrderService<OrderClient> service)
+        private readonly IOrderService<OrderClient,OrderDetailsClient> _orderServiceBL;
+        public OrderController(IOrderService<OrderClient,OrderDetailsClient> service)
         {
             _orderServiceBL = service;
         }

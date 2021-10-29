@@ -89,13 +89,15 @@
     <Build Include="StoredProcedures\UpdateManufacturing.sql" />
     <Build Include="StoredProcedures\InsertContractManufacturing.sql" />
     <Build Include="StoredProcedures\UpdateContractManufacturing.sql" />
+    <Build Include="Tables\PriceBaseProduct.sql" />
+    <Build Include="Views\V_OrderDetail.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="ACADB.refactorlog" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ACADB.publish.xml" />
-    <None Include="ACADBPortable.publish.xml" />
+    <None Include="ACADBPortable.publish.publish.xml" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Script.PostDeployment1.sql" />

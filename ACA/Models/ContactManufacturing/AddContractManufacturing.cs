@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ACA.DTO.ContactManufacturing
+namespace ACA.Models.ContactManufacturing
 {
     public class AddContractManufacturing
     {
