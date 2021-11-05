@@ -19,6 +19,10 @@ namespace BusinessLogicLayer.Services
         {
             this.service = service;
         }
+        public bool Binding(int IdCustomer, int IdUser)
+        {
+            return service.Binding(IdCustomer, IdUser);
+        }
         public void Create(UserClient Entity)
         {
             service.Create(Entity.Map<Users>());

@@ -17,8 +17,7 @@ namespace DataAccessLayer.Entities
         public string Address { get; set; }
         public string BusinessName { get; set; }
         public string PhoneNumber { get; set; }
-        [MapIgnore]
-        public int? UserId { get; set; }
+      
 
     }
 }

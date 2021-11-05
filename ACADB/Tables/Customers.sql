@@ -6,7 +6,5 @@
 	[Email]varchar(30) not null,
 	[Address]varchar(30),
 	BusinessName varchar(100),
-	PhoneNumber varchar(20),
-	UserId int, 
-    CONSTRAINT [FK_Customers_ToUser] FOREIGN KEY ([UserId]) REFERENCES [Users]([Id])
+	PhoneNumber varchar(20)
 )

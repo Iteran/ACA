@@ -68,6 +68,15 @@ namespace ACA
                     In = ParameterLocation.Header,
                     Description = "JWT Authorization header using the Bearer scheme."
                 });
+
+                /*
+                services.AddCors(options => options.AddPolicy("ACA", builder => {
+                    builder.WithOrigins("https://localhost:44350/api/Auth/Login", "http://localhost:4200");
+                    builder.AllowAnyOrigin();
+                    builder.AllowAnyMethod();
+                    builder.AllowAnyHeader();
+                }));*/
+
                 c.AddSecurityRequirement(new OpenApiSecurityRequirement
                 {
                     {
@@ -115,6 +124,10 @@ namespace ACA
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ACA v1"));
             }
+
+            app.UseCors(builder => {
+                builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+            });
 
             app.UseHttpsRedirection();
 

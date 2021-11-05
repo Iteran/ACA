@@ -10,5 +10,6 @@ namespace InterfacesACA.Interfaces
     {
         public bool ModifyPassword(int Id, string NewPwd);
         public T Login(string email, string password);
+        public bool Binding(int IdCustomer, int IdUser);
     }
 }

@@ -1,25 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tomro\\OneDrive\\Bureau\\ACA\\ACA\\ACA\\ACA.csproj": {}
+    "C:\\Users\\Exiteras\\Desktop\\ACA\\ACA\\ACA\\ACA.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tomro\\OneDrive\\Bureau\\ACA\\ACA\\ACA\\ACA.csproj": {
+    "C:\\Users\\Exiteras\\Desktop\\ACA\\ACA\\ACA\\ACA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tomro\\OneDrive\\Bureau\\ACA\\ACA\\ACA\\ACA.csproj",
+        "projectUniqueName": "C:\\Users\\Exiteras\\Desktop\\ACA\\ACA\\ACA\\ACA.csproj",
         "projectName": "ACA",
-        "projectPath": "C:\\Users\\tomro\\OneDrive\\Bureau\\ACA\\ACA\\ACA\\ACA.csproj",
-        "packagesPath": "C:\\Users\\tomro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tomro\\OneDrive\\Bureau\\ACA\\ACA\\ACA\\obj\\",
+        "projectPath": "C:\\Users\\Exiteras\\Desktop\\ACA\\ACA\\ACA\\ACA.csproj",
+        "packagesPath": "C:\\Users\\Exiteras\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Exiteras\\Desktop\\ACA\\ACA\\ACA\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\tomro\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Exiteras\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -34,11 +32,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\tomro\\OneDrive\\Bureau\\ACA\\ACA\\BusinessLogicLayer\\BusinessLogicLayer.csproj": {
-                "projectPath": "C:\\Users\\tomro\\OneDrive\\Bureau\\ACA\\ACA\\BusinessLogicLayer\\BusinessLogicLayer.csproj"
+              "C:\\Users\\Exiteras\\Desktop\\ACA\\ACA\\BusinessLogicLayer\\BusinessLogicLayer.csproj": {
+                "projectPath": "C:\\Users\\Exiteras\\Desktop\\ACA\\ACA\\BusinessLogicLayer\\BusinessLogicLayer.csproj"
               },
-              "C:\\Users\\tomro\\OneDrive\\Bureau\\ACA\\ACA\\InterfacesACA\\InterfacesACA.csproj": {
-                "projectPath": "C:\\Users\\tomro\\OneDrive\\Bureau\\ACA\\ACA\\InterfacesACA\\InterfacesACA.csproj"
+              "C:\\Users\\Exiteras\\Desktop\\ACA\\ACA\\InterfacesACA\\InterfacesACA.csproj": {
+                "projectPath": "C:\\Users\\Exiteras\\Desktop\\ACA\\ACA\\InterfacesACA\\InterfacesACA.csproj"
               }
             }
           }
@@ -88,26 +86,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.303\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\tomro\\OneDrive\\Bureau\\ACA\\ACA\\AdoLibrary-master\\ADOLibrary\\ADOLibrary.csproj": {
+    "C:\\Users\\Exiteras\\Desktop\\ACA\\ACA\\AdoLibrary-master\\ADOLibrary\\ADOLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tomro\\OneDrive\\Bureau\\ACA\\ACA\\AdoLibrary-master\\ADOLibrary\\ADOLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\Exiteras\\Desktop\\ACA\\ACA\\AdoLibrary-master\\ADOLibrary\\ADOLibrary.csproj",
         "projectName": "ADOLibrary",
-        "projectPath": "C:\\Users\\tomro\\OneDrive\\Bureau\\ACA\\ACA\\AdoLibrary-master\\ADOLibrary\\ADOLibrary.csproj",
-        "packagesPath": "C:\\Users\\tomro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tomro\\OneDrive\\Bureau\\ACA\\ACA\\AdoLibrary-master\\ADOLibrary\\obj\\",
+        "projectPath": "C:\\Users\\Exiteras\\Desktop\\ACA\\ACA\\AdoLibrary-master\\ADOLibrary\\ADOLibrary.csproj",
+        "packagesPath": "C:\\Users\\Exiteras\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Exiteras\\Desktop\\ACA\\ACA\\AdoLibrary-master\\ADOLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\tomro\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Exiteras\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -148,26 +144,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.303\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\tomro\\OneDrive\\Bureau\\ACA\\ACA\\BusinessLogicLayer\\BusinessLogicLayer.csproj": {
+    "C:\\Users\\Exiteras\\Desktop\\ACA\\ACA\\BusinessLogicLayer\\BusinessLogicLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tomro\\OneDrive\\Bureau\\ACA\\ACA\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Exiteras\\Desktop\\ACA\\ACA\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
         "projectName": "BusinessLogicLayer",
-        "projectPath": "C:\\Users\\tomro\\OneDrive\\Bureau\\ACA\\ACA\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
-        "packagesPath": "C:\\Users\\tomro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tomro\\OneDrive\\Bureau\\ACA\\ACA\\BusinessLogicLayer\\obj\\",
+        "projectPath": "C:\\Users\\Exiteras\\Desktop\\ACA\\ACA\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
+        "packagesPath": "C:\\Users\\Exiteras\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Exiteras\\Desktop\\ACA\\ACA\\BusinessLogicLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\tomro\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Exiteras\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -182,8 +176,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\tomro\\OneDrive\\Bureau\\ACA\\ACA\\DataAccessLayer\\DataAccessLayer.csproj": {
-                "projectPath": "C:\\Users\\tomro\\OneDrive\\Bureau\\ACA\\ACA\\DataAccessLayer\\DataAccessLayer.csproj"
+              "C:\\Users\\Exiteras\\Desktop\\ACA\\ACA\\DataAccessLayer\\DataAccessLayer.csproj": {
+                "projectPath": "C:\\Users\\Exiteras\\Desktop\\ACA\\ACA\\DataAccessLayer\\DataAccessLayer.csproj"
               }
             }
           }
@@ -212,26 +206,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.303\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\tomro\\OneDrive\\Bureau\\ACA\\ACA\\DataAccessLayer\\DataAccessLayer.csproj": {
+    "C:\\Users\\Exiteras\\Desktop\\ACA\\ACA\\DataAccessLayer\\DataAccessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tomro\\OneDrive\\Bureau\\ACA\\ACA\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Exiteras\\Desktop\\ACA\\ACA\\DataAccessLayer\\DataAccessLayer.csproj",
         "projectName": "DataAccessLayer",
-        "projectPath": "C:\\Users\\tomro\\OneDrive\\Bureau\\ACA\\ACA\\DataAccessLayer\\DataAccessLayer.csproj",
-        "packagesPath": "C:\\Users\\tomro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tomro\\OneDrive\\Bureau\\ACA\\ACA\\DataAccessLayer\\obj\\",
+        "projectPath": "C:\\Users\\Exiteras\\Desktop\\ACA\\ACA\\DataAccessLayer\\DataAccessLayer.csproj",
+        "packagesPath": "C:\\Users\\Exiteras\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Exiteras\\Desktop\\ACA\\ACA\\DataAccessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\tomro\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Exiteras\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -246,14 +238,14 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\tomro\\OneDrive\\Bureau\\ACA\\ACA\\AdoLibrary-master\\ADOLibrary\\ADOLibrary.csproj": {
-                "projectPath": "C:\\Users\\tomro\\OneDrive\\Bureau\\ACA\\ACA\\AdoLibrary-master\\ADOLibrary\\ADOLibrary.csproj"
+              "C:\\Users\\Exiteras\\Desktop\\ACA\\ACA\\AdoLibrary-master\\ADOLibrary\\ADOLibrary.csproj": {
+                "projectPath": "C:\\Users\\Exiteras\\Desktop\\ACA\\ACA\\AdoLibrary-master\\ADOLibrary\\ADOLibrary.csproj"
               },
-              "C:\\Users\\tomro\\OneDrive\\Bureau\\ACA\\ACA\\InterfacesACA\\InterfacesACA.csproj": {
-                "projectPath": "C:\\Users\\tomro\\OneDrive\\Bureau\\ACA\\ACA\\InterfacesACA\\InterfacesACA.csproj"
+              "C:\\Users\\Exiteras\\Desktop\\ACA\\ACA\\InterfacesACA\\InterfacesACA.csproj": {
+                "projectPath": "C:\\Users\\Exiteras\\Desktop\\ACA\\ACA\\InterfacesACA\\InterfacesACA.csproj"
               },
-              "C:\\Users\\tomro\\OneDrive\\Bureau\\ACA\\ACA\\Mappers\\Mappers.csproj": {
-                "projectPath": "C:\\Users\\tomro\\OneDrive\\Bureau\\ACA\\ACA\\Mappers\\Mappers.csproj"
+              "C:\\Users\\Exiteras\\Desktop\\ACA\\ACA\\Mappers\\Mappers.csproj": {
+                "projectPath": "C:\\Users\\Exiteras\\Desktop\\ACA\\ACA\\Mappers\\Mappers.csproj"
               }
             }
           }
@@ -292,26 +284,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.303\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\tomro\\OneDrive\\Bureau\\ACA\\ACA\\InterfacesACA\\InterfacesACA.csproj": {
+    "C:\\Users\\Exiteras\\Desktop\\ACA\\ACA\\InterfacesACA\\InterfacesACA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tomro\\OneDrive\\Bureau\\ACA\\ACA\\InterfacesACA\\InterfacesACA.csproj",
+        "projectUniqueName": "C:\\Users\\Exiteras\\Desktop\\ACA\\ACA\\InterfacesACA\\InterfacesACA.csproj",
         "projectName": "InterfacesACA",
-        "projectPath": "C:\\Users\\tomro\\OneDrive\\Bureau\\ACA\\ACA\\InterfacesACA\\InterfacesACA.csproj",
-        "packagesPath": "C:\\Users\\tomro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tomro\\OneDrive\\Bureau\\ACA\\ACA\\InterfacesACA\\obj\\",
+        "projectPath": "C:\\Users\\Exiteras\\Desktop\\ACA\\ACA\\InterfacesACA\\InterfacesACA.csproj",
+        "packagesPath": "C:\\Users\\Exiteras\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Exiteras\\Desktop\\ACA\\ACA\\InterfacesACA\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\tomro\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Exiteras\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -352,26 +342,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.303\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\tomro\\OneDrive\\Bureau\\ACA\\ACA\\Mappers\\Mappers.csproj": {
+    "C:\\Users\\Exiteras\\Desktop\\ACA\\ACA\\Mappers\\Mappers.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tomro\\OneDrive\\Bureau\\ACA\\ACA\\Mappers\\Mappers.csproj",
+        "projectUniqueName": "C:\\Users\\Exiteras\\Desktop\\ACA\\ACA\\Mappers\\Mappers.csproj",
         "projectName": "Mappers",
-        "projectPath": "C:\\Users\\tomro\\OneDrive\\Bureau\\ACA\\ACA\\Mappers\\Mappers.csproj",
-        "packagesPath": "C:\\Users\\tomro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tomro\\OneDrive\\Bureau\\ACA\\ACA\\Mappers\\obj\\",
+        "projectPath": "C:\\Users\\Exiteras\\Desktop\\ACA\\ACA\\Mappers\\Mappers.csproj",
+        "packagesPath": "C:\\Users\\Exiteras\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Exiteras\\Desktop\\ACA\\ACA\\Mappers\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\tomro\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Exiteras\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -386,8 +374,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\tomro\\OneDrive\\Bureau\\ACA\\ACA\\AdoLibrary-master\\ADOLibrary\\ADOLibrary.csproj": {
-                "projectPath": "C:\\Users\\tomro\\OneDrive\\Bureau\\ACA\\ACA\\AdoLibrary-master\\ADOLibrary\\ADOLibrary.csproj"
+              "C:\\Users\\Exiteras\\Desktop\\ACA\\ACA\\AdoLibrary-master\\ADOLibrary\\ADOLibrary.csproj": {
+                "projectPath": "C:\\Users\\Exiteras\\Desktop\\ACA\\ACA\\AdoLibrary-master\\ADOLibrary\\ADOLibrary.csproj"
               }
             }
           }
@@ -416,7 +404,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.303\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

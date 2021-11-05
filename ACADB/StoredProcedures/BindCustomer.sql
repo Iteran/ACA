@@ -2,5 +2,11 @@
 	@customerId int,
 	@userId int
 AS
-	Update Customers set UserId = @userId where Id = @customerId and UserId is null
+if exists (select CustomerId from users where CustomerId = @customerId)
+	begin
+		--raiseError
+		return -1;
+	end
+	
+	Update Users set CustomerId = @customerId where (Id = @userId) and (CustomerId is null) 
 RETURN 0

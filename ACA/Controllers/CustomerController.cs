@@ -78,23 +78,7 @@ namespace ACA.Controllers
 
 
         }
-        [HttpPost("{CustomerId}")]
-        public IActionResult Bind([FromRoute]int CustomerId,[FromBody]int UserId)
-        {
-            try
-            {
-                if (service.Binding(CustomerId, UserId)) return Ok();
-                else
-                {
-                    return BadRequest();
-                }
-            }
-            catch (Exception e)
-            {
-
-                return Problem(e.Message);
-            }
-        }
+        
         [HttpPut("{Id}")]
         public IActionResult Put([FromRoute] int Id, [FromBody] CustomerAdd form)
         {

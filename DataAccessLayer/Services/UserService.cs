@@ -21,6 +21,15 @@ namespace DataAccessLayer.Services
         {
             _co = new(SqlClientFactory.Instance, config.GetConnectionString("Default"));
         }
+
+        public bool Binding(int IdCustomer, int IdUser)
+        {
+            Command cmd = new("BindCustomer", true);
+            cmd.AddParameter("@customerId", IdCustomer);
+            cmd.AddParameter("@userId", IdUser);
+            return _co.ExecuteNonQuery(cmd) == 1;
+        }
+
         public Users Convert(IDataRecord reader) 
         {
             return reader.MapReader<Users>();

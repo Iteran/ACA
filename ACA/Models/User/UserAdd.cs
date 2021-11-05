@@ -10,9 +10,8 @@ namespace ACA.Models.User
     {
         [Required]
         public string Email { get; set; }
-        [Required]
-        [Compare("Email")]
-        public string ConfirmEmail { get; set; }
+
+        
 
         [Required]
 

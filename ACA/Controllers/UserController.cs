@@ -22,8 +22,25 @@ namespace ACA.Controllers
         {
             this.service = service;
         }
+        [HttpPost("{CustomerId}")]
+        public IActionResult Bind([FromRoute] int CustomerId, [FromBody] int UserId)
+        {
+            try
+            {
+                if (service.Binding(CustomerId, UserId)) return Ok();
+                else
+                {
+                    return BadRequest();
+                }
+            }
+            catch (Exception e)
+            {
 
-        
+                return Problem(e.Message);
+            }
+        }
+
+
         [HttpGet]
         public IActionResult GetAll()
         {

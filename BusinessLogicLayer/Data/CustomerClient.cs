@@ -15,6 +15,6 @@ namespace BusinessLogicLayer.Data
         public string Address { get; set; }
         public string BusinessName { get; set; }
         public string PhoneNumber { get; set; }
-        public int? UserId { get; set; }
+        
     }
 }

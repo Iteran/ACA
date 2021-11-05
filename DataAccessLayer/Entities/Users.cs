@@ -17,5 +17,7 @@ namespace DataAccessLayer.Entities
         [ReadIgnore]
         public string Password { get; set; }
         public string Email { get; set; }
+        [MapIgnore]
+        public int? CustomerId { get; set; }
     }
 }

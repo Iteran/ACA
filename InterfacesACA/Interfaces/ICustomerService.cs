@@ -8,6 +8,6 @@ namespace InterfacesACA.Interfaces
 {
     public interface ICustomerService<T> : ICRUD<T,int>
     {
-        public bool Binding(int IdCustomer, int IdUser);
+        
     }
 }
