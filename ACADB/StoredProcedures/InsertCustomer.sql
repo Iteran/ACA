@@ -7,5 +7,6 @@
 	@phoneNumber varchar(20)
 	
 AS
-	insert into Customers (Name, FirstName, Email, Address, BusinessName, PhoneNumber) values(@name,@firstName,@email,@address,@businessName,@phoneNumber)
-RETURN 0
+	insert into Customers (Name, FirstName, Email, Address, BusinessName, PhoneNumber) output inserted.Id values (@name,@firstName,@email,@address,@businessName,@phoneNumber)
+	
+

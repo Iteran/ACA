@@ -53,8 +53,8 @@ namespace ACA.Controllers
         {
             try
             {
-                service.Create(customer.Map<CustomerClient>());
-                return Ok();
+                
+                return Ok(service.Create(customer.Map<CustomerClient>()));
             }
             catch (Exception e)
             {

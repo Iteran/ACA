@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[BindCustomer]
+﻿	CREATE PROCEDURE [dbo].[BindCustomer]
 	@customerId int,
 	@userId int
 AS

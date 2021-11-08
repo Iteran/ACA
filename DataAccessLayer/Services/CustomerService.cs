@@ -28,17 +28,21 @@ namespace DataAccessLayer.Services
         {
             return reader.MapReader<Customers>();
         }
-        public void Create(Customers Entity)
+        public int Create(Customers Entity)
         {
             Command cmd = new Command("InsertCustomer", true);
             cmd.MapToCommand(Entity);
-            _co.ExecuteNonQuery(cmd);
+            return (int)_co.ExecuteScalar(cmd);
+            
         }
+
+       
 
         public bool Delete(int Id)
         {
             
-            Command cmd = new("Delete FROM Customers where Id = @Id");
+            Command cmd = new("DeleteCustomer",true);
+            
             using (TransactionScope scope = new())
             {
                 try
@@ -92,6 +96,11 @@ namespace DataAccessLayer.Services
                     throw;
                 }
             }
+        }
+
+        void ICRUD<Customers, int>.Create(Customers Entity)
+        {
+            throw new NotImplementedException();
         }
     }
 }

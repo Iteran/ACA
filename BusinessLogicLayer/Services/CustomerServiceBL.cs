@@ -20,9 +20,9 @@ namespace BusinessLogicLayer.Services
         }
         
 
-        public void Create(CustomerClient Entity)
+        public int Create(CustomerClient Entity)
         {
-            service.Create(Entity.Map<Customers>());
+            return service.Create(Entity.Map<Customers>());
         }
 
         public bool Delete(int Id)
@@ -43,6 +43,11 @@ namespace BusinessLogicLayer.Services
         public CustomerClient Update(int Id, CustomerClient Entity)
         {
             return service.Update(Id, Entity.Map<Customers>()).Map<CustomerClient>();
+        }
+
+        void ICRUD<CustomerClient, int>.Create(CustomerClient Entity)
+        {
+            throw new NotImplementedException();
         }
     }
 }
