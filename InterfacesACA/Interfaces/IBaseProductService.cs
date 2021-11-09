@@ -7,7 +7,7 @@ namespace InterfacesACA.Interfaces
     {
         void AddQuantity(int Id, int value);
         public void DeleteQuantity(int Id, int value);
-
+       
 
     }
 }
