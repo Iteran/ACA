@@ -1,6 +1,6 @@
 ﻿CREATE PROCEDURE [dbo].[InsertBaseProduct]
 	@name varchar(40),
-	@picture varchar(200),
+	@picture varchar(max),
 	@description varchar(200),
 	@quantity int
 AS

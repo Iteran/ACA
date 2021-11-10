@@ -2,7 +2,7 @@
 (
 	[Id] INT NOT NULL PRIMARY KEY identity,
 	[Name] varchar(40),
-	Picture varchar(100),
+	Picture varchar(max),
 	[Description] varchar(500),
 	Quantity int
 )
