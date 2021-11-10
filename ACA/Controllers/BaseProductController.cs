@@ -17,7 +17,7 @@ namespace ACA.Controllers
     [ApiController]
     public class BaseProductController : ControllerBase
     {
-        private readonly IBaseProductService<BaseProductClient>  _baseProductService;
+        private readonly IBaseProductService<BaseProductClient> _baseProductService;
         public BaseProductController(IBaseProductService<BaseProductClient> service)
         {
             _baseProductService = service;
@@ -28,12 +28,12 @@ namespace ACA.Controllers
             return Ok(_baseProductService.GetAll());
         }
         [HttpGet("{Id}")]
-        public IActionResult GetById([FromRoute]int Id)
+        public IActionResult GetById([FromRoute] int Id)
         {
             return Ok(_baseProductService.GetById(Id));
         }
         [HttpPost]
-        public IActionResult Post([FromBody]AddBaseProduct product)
+        public IActionResult Post([FromBody] AddBaseProduct product)
         {
             try
             {
@@ -45,23 +45,23 @@ namespace ACA.Controllers
             {
                 return Problem(e.Message);
             }
-            
-            
+
+
         }
         [HttpPut("{Id}")]
-        public IActionResult Put([FromRoute] int Id, [FromBody] BaseProductClient ModifiedProduct)
+        public IActionResult Put([FromRoute] int Id, [FromBody] AddBaseProduct ModifiedProduct)
         {
-            return Ok(_baseProductService.Update(Id, ModifiedProduct));
+            return Ok(_baseProductService.Update(Id, ModifiedProduct.Map<BaseProductClient>()));
         }
         [HttpPatch("Add/{Id}")]
-        public IActionResult AddQuantity([FromRoute] int Id, int QuantityAdd)
+        public IActionResult AddQuantity([FromRoute] int Id, [FromBody] int QuantityAdd)
         {
             _baseProductService.AddQuantity(Id, QuantityAdd);
             return Ok();
         }
         [HttpPatch("Delete/{Id}")]
-        
-        public IActionResult DeleteQuantity([FromRoute]int Id, int QuantityDel)
+
+        public IActionResult DeleteQuantity([FromRoute] int Id, [FromBody] int QuantityDel)
         {
             _baseProductService.DeleteQuantity(Id, QuantityDel);
             return Ok();

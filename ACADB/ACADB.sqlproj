@@ -92,6 +92,7 @@
     <Build Include="Tables\PriceBaseProduct.sql" />
     <Build Include="Views\V_OrderDetail.sql" />
     <Build Include="StoredProcedures\DeleteCustomer.sql" />
+    <Build Include="StoredProcedures\DeleteBaseProduct.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="ACADB.refactorlog" />

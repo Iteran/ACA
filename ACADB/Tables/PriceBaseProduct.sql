@@ -19,7 +19,7 @@ CREATE TRIGGER [dbo].[Trigger_PriceBaseProduct]
         SET NoCount ON
         declare @productId int
         declare @dateStart datetime2, @price money
-        select @productId = BaseproductId, @dateStart = DateStart, @price = PriceProduct from inserted
+        select @productId = BaseProductId, @dateStart = DateStart, @price = PriceProduct from inserted
         
         update PriceBaseProduct set EndDate = @dateStart where BaseProductId = @productId and EndDate is null
         insert into PriceBaseProduct (PriceProduct,BaseProductId,DateStart) values(@price,@productId,@dateStart)

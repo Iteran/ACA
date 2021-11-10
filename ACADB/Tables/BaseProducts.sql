@@ -4,7 +4,8 @@
 	[Name] varchar(40),
 	Picture varchar(max),
 	[Description] varchar(500),
-	Quantity int
+	Quantity int, 
+    [IsActive] BIT NULL DEFAULT 1
 )
 
 GO
@@ -17,3 +18,4 @@ CREATE TRIGGER [dbo].[Trigger_BaseProducts]
         SET NoCount ON
         insert into PriceBaseProduct (BaseProductId,DateStart,PriceProduct) values((select Id from inserted),getdate(),0)
     END
+GO

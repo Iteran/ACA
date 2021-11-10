@@ -50,7 +50,7 @@ namespace DataAccessLayer.Services
                 try
                 {
 
-                    Data.Command cmd = new("Delete from BaseProducts where Id = @id");
+                    Data.Command cmd = new("DeleteBaseProduct",true);
                     cmd.AddParameter("@id", id);
                     _co.ExecuteNonQuery(cmd);
                     scope.Complete();
@@ -65,7 +65,7 @@ namespace DataAccessLayer.Services
         }
         public IEnumerable<BaseProduct> GetAll()
         {
-            Data.Command cmd = new("select * from BaseProducts");
+            Data.Command cmd = new("select * from BaseProducts where IsActive = 1");
             return _co.ExecuteReader<BaseProduct>(cmd, Convert);
         }
         public BaseProduct GetById(int Id)

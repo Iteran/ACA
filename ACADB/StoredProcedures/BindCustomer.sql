@@ -2,7 +2,7 @@
 	@customerId int,
 	@userId int
 AS
-if exists (select CustomerId from users where CustomerId = @customerId)
+if exists (select CustomerId from Users where CustomerId = @customerId)
 	begin
 		--raiseError
 		return -1;
