@@ -11,11 +11,11 @@ using System.Threading.Tasks;
 
 namespace BusinessLogicLayer.Services
 {
-    public class BaseProductServiceBL : IBaseProductService<BaseProductClient>
+    public class BaseProductServiceBL : IBaseProductService<BaseProductClient,PriceBaseProductClient>
     {
-        private readonly IBaseProductService<BaseProduct> _baseProductService;
+        private readonly IBaseProductService<BaseProduct,PriceBaseProduct> _baseProductService;
 
-        public BaseProductServiceBL(IBaseProductService<BaseProduct> service)
+        public BaseProductServiceBL(IBaseProductService<BaseProduct,PriceBaseProduct> service)
         {
             _baseProductService = service;
         }
@@ -47,6 +47,20 @@ namespace BusinessLogicLayer.Services
         public void DeleteQuantity(int Id, int value)
         {
             _baseProductService.DeleteQuantity(Id, value);
+        }
+
+        public PriceBaseProductClient GetPrice(int Id)
+        {
+            return _baseProductService.GetPrice(Id).Map<PriceBaseProductClient>() ;
+        }
+        public PriceBaseProductClient InsertPrice(int Id, PriceBaseProductClient product)
+        {
+            return _baseProductService.InsertPrice(Id, product.Map<PriceBaseProduct>()).Map<PriceBaseProductClient>();
+        }
+
+        public IEnumerable<PriceBaseProductClient> GetAllPrice()
+        {
+            return _baseProductService.GetAllPrice().Select(c => c.Map<PriceBaseProductClient>());
         }
     }
 }

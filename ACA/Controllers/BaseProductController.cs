@@ -17,8 +17,8 @@ namespace ACA.Controllers
     [ApiController]
     public class BaseProductController : ControllerBase
     {
-        private readonly IBaseProductService<BaseProductClient> _baseProductService;
-        public BaseProductController(IBaseProductService<BaseProductClient> service)
+        private readonly IBaseProductService<BaseProductClient,PriceBaseProductClient> _baseProductService;
+        public BaseProductController(IBaseProductService<BaseProductClient,PriceBaseProductClient> service)
         {
             _baseProductService = service;
         }
@@ -71,6 +71,21 @@ namespace ACA.Controllers
         {
             _baseProductService.Delete(Id);
             return Ok();
+        }
+        [HttpGet("Price/{Id}")]
+        public IActionResult GetPrice([FromRoute]int Id)
+        {
+            return Ok(_baseProductService.GetPrice(Id));
+        }
+        [HttpPost("Price/{Id}")]
+        public IActionResult InsertPrice([FromRoute] int Id, [FromBody] PriceProductAdd product)
+        {
+            return Ok(_baseProductService.InsertPrice(Id, product.Map<PriceBaseProductClient>()));
+        }
+        [HttpGet("Price")]
+        public IActionResult GetAllPrice()
+        {
+            return Ok(_baseProductService.GetAllPrice());
         }
     }
 }

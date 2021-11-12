@@ -11,10 +11,11 @@ using Mappers;
 using Microsoft.Extensions.Configuration;
 using System.Transactions;
 using InterfacesACA.Interfaces;
+using System.Data.SqlTypes;
 
 namespace DataAccessLayer.Services
 {
-    public class BaseProductService : IBaseProductService<BaseProduct>
+    public class BaseProductService : IBaseProductService<BaseProduct,PriceBaseProduct>
     {
         private Data.Connection _co { get; set; }
         public BaseProductService(IConfiguration config)
@@ -24,6 +25,10 @@ namespace DataAccessLayer.Services
         private BaseProduct Convert(IDataRecord reader)
         {
             return reader.MapReader<BaseProduct>();
+        }
+        private PriceBaseProduct ConvertPrice(IDataRecord reader)
+        {
+            return reader.MapReader<PriceBaseProduct>();
         }
         public void Create(BaseProduct product)
         {
@@ -106,6 +111,28 @@ namespace DataAccessLayer.Services
             cmd.AddParameter("@quantity", value);
             cmd.AddParameter("@id", Id);
             _co.ExecuteNonQuery(cmd);
+        }
+
+        public PriceBaseProduct GetPrice(int Id)
+        {
+            Data.Command cmd = new("select * from PriceBaseProduct where BaseProductId = @Id and (EndDate is null or EndDate>GETDATE()) and DateStart < GETDATE()");
+            cmd.AddParameter("@Id", Id);
+            return _co.ExecuteReader<PriceBaseProduct>(cmd, ConvertPrice).FirstOrDefault();
+        }
+        public PriceBaseProduct InsertPrice(int Id, PriceBaseProduct product)
+        {
+            Data.Command cmd = new("InsertPriceBaseProduct", true);
+            cmd.AddParameter("@Id", Id);
+            cmd.AddParameter("@priceProduct", product.PriceProduct);
+            cmd.AddParameter("@dateStart", product.DateStart);
+            _co.ExecuteNonQuery(cmd);
+            return GetPrice(Id);
+        }
+
+        public IEnumerable<PriceBaseProduct> GetAllPrice()
+        {
+            Data.Command cmd = new("select * from PriceBaseProduct where GETDATE() between DateStart and EndDate or EndDate is null and DateStart<getdate()");
+            return _co.ExecuteReader<PriceBaseProduct>(cmd, ConvertPrice);
         }
     }
 }

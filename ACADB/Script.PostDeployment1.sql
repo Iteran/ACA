@@ -9,7 +9,7 @@ Post-Deployment Script Template
                SELECT * FROM [$(TableName)]					
 --------------------------------------------------------------------------------------
 */
-insert into BaseProducts (Name,Picture,Description,Quantity) values('TissuBleu','ahjzhrhtht','Tissu mais bleu',10)
+insert into BaseProducts (Name,Picture,Description,Quantity) values('TissuBleu','Tissu mais bleu',10)
 exec InsertUser 't@t','t'
 update Users set IsAdmin = 1 where Id = 1
 exec InsertCustomer 'Rog','Tom','t@t','LaRueOk','ACA','15151056521'

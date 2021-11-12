@@ -40,8 +40,8 @@ namespace ACA
         {
 
             services.AddControllers();
-            services.AddScoped<IBaseProductService<BaseProduct>,BaseProductService>();
-            services.AddScoped<IBaseProductService<BaseProductClient>,BaseProductServiceBL>();
+            services.AddScoped<IBaseProductService<BaseProduct,PriceBaseProduct>,BaseProductService>();
+            services.AddScoped<IBaseProductService<BaseProductClient,PriceBaseProductClient>,BaseProductServiceBL>();
             services.AddScoped<IOrderService<Order,OrderDetails>, OrderService>();
             services.AddScoped<IOrderService<OrderClient,OrderDetailsClient>, OrderServiceBL>();
             services.AddScoped<ICustomerService<Customers>,CustomerService>();
